@@ -319,46 +319,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "tutorial/step04/tests.py",
-			"settings":
-			{
-				"buffer_size": 1543,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "tulio_project/views.py",
-			"settings":
-			{
-				"buffer_size": 0,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "tulio_project/application.py",
-			"settings":
-			{
-				"buffer_size": 0,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "tulio_project/setup.py",
-			"settings":
-			{
-				"buffer_size": 1175,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "python_enviroment/venv/bin/pshell",
-			"settings":
-			{
-				"buffer_size": 304,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -428,33 +388,6 @@
 	},
 	"file_history":
 	[
-		"/home/matheus/pyramid_instances/tulio_project/banco.txt",
-		"/home/matheus/pyramid_instances/tutorial/step04/people.pt",
-		"/home/matheus/pyramid_instances/tutorial/step09/test_layout.py",
-		"/home/matheus/pyramid_instances/tutorial/step09/test_views.py",
-		"/home/matheus/pyramid_instances/tutorial/step09/people.pt",
-		"/home/matheus/pyramid_instances/tutorial/step09/company.pt",
-		"/home/matheus/pyramid_instances/tutorial/step09/about.pt",
-		"/home/matheus/pyramid_instances/tutorial/step09/index.pt",
-		"/home/matheus/pyramid_instances/tutorial/step09/global_layout.pt",
-		"/home/matheus/pyramid_instances/tutorial/step09/dummie_data.py",
-		"/home/matheus/pyramid_instances/pyramid.sublime-project",
-		"/home/matheus/pyramid_instances/README.md",
-		"/home/matheus/pyramid_instances/.gitignore",
-		"/home/matheus/pyramid_instances/tutorial/step09/layouts.py",
-		"/home/matheus/pyramid_instances/tutorial/step09/views.py",
-		"/home/matheus/pyramid_instances/tutorial/step09/static/global_layout.js",
-		"/home/matheus/pyramid_instances/tutorial/step09/static/global_layout.css",
-		"/home/matheus/pyramid_instances/tutorial/step09/application.py",
-		"/home/matheus/pyramid_instances/tutorial/step04/company.pt",
-		"/home/matheus/pyramid_instances/tutorial/step04/about.pt",
-		"/home/matheus/pyramid_instances/tutorial/step04/index.pt",
-		"/home/matheus/pyramid_instances/tutorial/step04/views.py",
-		"/home/matheus/pyramid_instances/tutorial/step04/application.py",
-		"/home/matheus/pyramid_instances/tulio_project/application.py",
-		"/home/matheus/pyramid_instances/tulio_project/views.py",
-		"/home/matheus/pyramid_instances/tulio_project/layouts.py",
-		"/home/matheus/pyramid_instances/tulio_project/templates/global_layouts.pt",
 		"/home/matheus/pyramid_instances/tutorial/step09/company.p",
 		"/home/matheus/pyramid_instances/python_enviroment/venv/lib/python2.7/site-packages/pyramid-1.4-py2.7.egg/pyramid/decorator.py",
 		"/home/matheus/pyramid_instances/tutorial/step02/application.py",
@@ -555,7 +488,34 @@
 		"/home/matheus/plone_instances/communi/1/src/wres.theme/wres/theme/locales/pt-br/LC_MESSAGES/0_d_tour_inicial.po",
 		"/home/matheus/plone_instances/communi/1/src/wres.theme/wres/theme/locales/pt-br/LC_MESSAGES/0_S_tour_inicial.po",
 		"/home/matheus/plone_instances/communi/1/src/wres.theme/wres/theme/locales/pt-br/LC_MESSAGES/1_d_registro_rapido.po",
-		"/home/matheus/plone_instances/communi/1/src/wres.theme/wres/theme/locales/pt-br/LC_MESSAGES/1_S_registro_rapido.po"
+		"/home/matheus/plone_instances/communi/1/src/wres.theme/wres/theme/locales/pt-br/LC_MESSAGES/1_S_registro_rapido.po",
+		"/home/matheus/plone_instances/communi/1/src/wres.theme/wres/theme/locales/pt-br/LC_MESSAGES/1_S_registro_rapido.po_",
+		"/home/matheus/plone_instances/communi/1/src/wres.theme/wres/theme/locales/pt-br/LC_MESSAGES/2_d_cadastrar_consulta.po",
+		"/home/matheus/plone_instances/communi/1/src/wres.theme/wres/theme/locales/pt-br/LC_MESSAGES/2_S_cadastrar_consulta.po",
+		"/home/matheus/plone_instances/communi/1/src/wres.theme/wres/theme/locales/pt-br/LC_MESSAGES/3_d_configurando_calendario.po",
+		"/home/matheus/plone_instances/communi/1/src/wres.theme/wres/theme/locales/pt-br/LC_MESSAGES/3_S_configurando_calendario.po",
+		"/home/matheus/plone_instances/communi/1/src/wres.theme/wres/theme/locales/pt-br/LC_MESSAGES/4_s_editando_paciente.po",
+		"/home/matheus/plone_instances/communi/1/src/wres.theme/wres/theme/locales/pt-br/LC_MESSAGES/5_d_criar_modelo_consulta.po",
+		"/home/matheus/plone_instances/communi/1/src/wres.theme/wres/theme/locales/pt-br/LC_MESSAGES/6_d_criar_documento_a_partir_de_modelo.po",
+		"/home/matheus/plone_instances/communi/1/src/wres.theme/wres/theme/locales/pt-br/LC_MESSAGES/7_d_criar_imprimir_prescricoes.po",
+		"/home/matheus/plone_instances/communi/1/src/wres.theme/wres/theme/locales/pt-br/LC_MESSAGES/8_s_alterar_senha.po",
+		"/home/matheus/plone_instances/communi/1/src/wres.theme/wres/theme/locales/pt-br/LC_MESSAGES/9_s_feedback.po",
+		"/home/matheus/plone_instances/communi/1/src/wres.theme/wres/theme/locales/pt-br/LC_MESSAGES/5_criar_modelo_consulta.po",
+		"/home/matheus/plone_instances/communi/1/src/wres.theme/wres/theme/locales/pt-br/LC_MESSAGES/cmfuemr.po",
+		"/home/matheus/plone_instances/communi/1/src/wres.theme/wres/theme/locales/pt-br/LC_MESSAGES/collective.amberjack.core.po",
+		"/home/matheus/plone_instances/communi/1/src/wres.theme/wres/theme/locales/pt-br/LC_MESSAGES/collective.amberjack.portlet.po",
+		"/home/matheus/plone_instances/communi/1/src/wres.theme/wres/theme/locales/pt-br/LC_MESSAGES/Solgema.fullcalendar.po",
+		"/home/matheus/pyramid_instances/tutorial_workspace/creatingux/step05/tests.py",
+		"/home/matheus/pyramid_instances/tutorial_workspace/creatingux/step05/people.pt",
+		"/home/matheus/pyramid_instances/tutorial_workspace/creatingux/step05/company.pt",
+		"/home/matheus/pyramid_instances/tutorial_workspace/creatingux/step05/about.pt",
+		"/home/matheus/pyramid_instances/tutorial_workspace/creatingux/step05/index.pt",
+		"/home/matheus/pyramid_instances/tutorial_workspace/creatingux/step06/views.py",
+		"/home/matheus/pyramid_instances/tutorial_workspace/resources/step02/templates/default_view.pt",
+		"/home/matheus/pyramid_instances/tutorial_workspace/resources/step02/application.py",
+		"/home/matheus/pyramid_instances/tutorial_workspace/resources/step01/tests.py",
+		"/home/matheus/pyramid_instances/tutorial_workspace/resources/step01/resources.py",
+		"/home/matheus/pyramid_instances/tutorial_workspace/resources/step01/views.py"
 	],
 	"find":
 	{
@@ -563,7 +523,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 96.0,
 		"where_history":
 		[
 			"",
@@ -738,143 +698,8 @@
 	"groups":
 	[
 		{
-			"selected": 4,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "tutorial/step04/tests.py",
-					"settings":
-					{
-						"buffer_size": 1543,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1543,
-								1543
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 48.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "tulio_project/views.py",
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "tulio_project/application.py",
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "tulio_project/setup.py",
-					"settings":
-					{
-						"buffer_size": 1175,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								81,
-								81
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "python_enviroment/venv/bin/pshell",
-					"settings":
-					{
-						"buffer_size": 304,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								62,
-								62
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -923,14 +748,6 @@
 		"height": 0.0,
 		"selected_items":
 		[
-			[
-				"appl",
-				"tulio_project/application.py"
-			],
-			[
-				"views",
-				"tulio_project/views.py"
-			],
 			[
 				"dv_ide",
 				"openehr/rm/datatypes/basic/DV_IDENTIFIER.py"
@@ -1434,6 +1251,14 @@
 			[
 				"admin.py",
 				"archetypes/content/admin.py"
+			],
+			[
+				"set",
+				"policy/setuphandlers.py"
+			],
+			[
+				"se",
+				"theme/skins/wres_theme_js/show_exams.js"
 			]
 		],
 		"width": 0.0

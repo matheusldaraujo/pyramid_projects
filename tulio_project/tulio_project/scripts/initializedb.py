@@ -13,10 +13,12 @@ from ..models import (
     DBSession,
     MyModel,
     Base,
+    UserModel,
     )
 
 
 def usage(argv):
+    print "usage"
     cmd = os.path.basename(argv[0])
     print('usage: %s <config_uri>\n'
           '(example: "%s development.ini")' % (cmd, cmd))
@@ -24,6 +26,7 @@ def usage(argv):
 
 
 def main(argv=sys.argv):
+    print "inicialize"
     if len(argv) != 2:
         usage(argv)
     config_uri = argv[1]
@@ -33,5 +36,9 @@ def main(argv=sys.argv):
     DBSession.configure(bind=engine)
     Base.metadata.create_all(engine)
     with transaction.manager:
-        model = MyModel(name='one', value=1)
+        model = MyModel(name='two', value=2)
+        usuario = UserModel(name="cesar", login="cs",senha="c")
+        # imagem = ImageModel(name="teste.png")
         DBSession.add(model)
+        DBSession.add(usuario)
+        # DBSession.add(imagem)

@@ -2,11 +2,7 @@
 	"folders":
 	[
 		{
-			"path": "/home/matheus/pyramid_instances/"
+			"path": "/home/matheus/pyramid_instances"
 		}
-	],
-	"settings":
-	{
-		"tab_size": 4
-	}
+	]
 }
