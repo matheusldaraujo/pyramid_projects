@@ -3,6 +3,7 @@ from pyramid.config import Configurator
 from sqlalchemy import engine_from_config
 from pyramid.authentication import AuthTktAuthenticationPolicy
 from pyramid.authorization import ACLAuthorizationPolicy
+from pyramid_mailer import Mailer
 from .security import groupfinder
 
 from .models import (
@@ -29,8 +30,14 @@ def main(global_config, **settings):
 
     #Url stuff
     config.add_static_view('static', 'static', cache_max_age=3600)
-    config.add_route('home', '/')
-    config.add_route('store_mp3', '/store_mp3')
+    config.add_route('home', '/old')
+    config.add_route('index', '/')
     config.add_route('store_script', '/store_mp3_view')
+
+    #Includes
+    config.include('pyramid_mailer')
+    config.registry['mailer'] = Mailer.from_settings(settings)
+
+    #start
     config.scan()
     return config.make_wsgi_app()

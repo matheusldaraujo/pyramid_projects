@@ -4,6 +4,90 @@
 		"selected_items":
 		[
 			[
+				"bo",
+				"bottom"
+			],
+			[
+				"thu",
+				"thumbs"
+			],
+			[
+				"path",
+				"pathThumbs"
+			],
+			[
+				"th",
+				"thumbs"
+			],
+			[
+				"sm",
+				"smallthumbsFile"
+			],
+			[
+				"image",
+				"imagesFile"
+			],
+			[
+				"images",
+				"imagesFile"
+			],
+			[
+				"t",
+				"thumbs"
+			],
+			[
+				"ma",
+				"max-height"
+			],
+			[
+				"mar",
+				"margin-left"
+			],
+			[
+				"mart",
+				"margin-top"
+			],
+			[
+				"al",
+				"vertical-align"
+			],
+			[
+				"pa",
+				"padding-left"
+			],
+			[
+				"bor",
+				"border"
+			],
+			[
+				"log",
+				"logged_in"
+			],
+			[
+				"D",
+				"DBSession"
+			],
+			[
+				"user",
+				"usersDB"
+			],
+			[
+				"for",
+				"forget"
+			],
+			[
+				"lo",
+				"logged_in"
+			],
+			[
+				"re",
+				"request"
+			],
+			[
+				"ex",
+				"except"
+			],
+			[
 				"termino",
 				"terminologia"
 			],
@@ -26,10 +110,6 @@
 			[
 				"O",
 				"OBJECT_ID"
-			],
-			[
-				"D",
-				"DV_ORDERED"
 			],
 			[
 				"dat",
@@ -74,10 +154,6 @@
 			[
 				"sta",
 				"status_tag"
-			],
-			[
-				"re",
-				"reindexObject"
 			],
 			[
 				"mat",
@@ -138,10 +214,6 @@
 			[
 				"border",
 				"border-top"
-			],
-			[
-				"mart",
-				"margin-bottom"
 			],
 			[
 				"marg",
@@ -232,14 +304,6 @@
 				"admin_folder"
 			],
 			[
-				"lo",
-				"login_url"
-			],
-			[
-				"log",
-				"login_form"
-			],
-			[
 				"wait",
 				"wait_time"
 			],
@@ -292,10 +356,6 @@
 				"pacientes"
 			],
 			[
-				"mar",
-				"margin-left"
-			],
-			[
 				"aju",
 				"ajuda_folder"
 			],
@@ -319,6 +379,105 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "tulio_project/tulio_project/views.py",
+			"settings":
+			{
+				"buffer_size": 9042,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "tulio_project/tulio_project/utils.py",
+			"settings":
+			{
+				"buffer_size": 110,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "tulio_project/tulio_project/models.py",
+			"settings":
+			{
+				"buffer_size": 1490,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "tulio_project/tulio_project/__init__.py",
+			"settings":
+			{
+				"buffer_size": 1131,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "tulio_project/tulio_project/security.py",
+			"settings":
+			{
+				"buffer_size": 376,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "tulio_project/tulio_project/templates/login.pt",
+			"settings":
+			{
+				"buffer_size": 2041,
+				"line_ending": "Unix",
+				"name": "casa"
+			}
+		},
+		{
+			"file": "tulio_project/tulio_project/templates/home.pt",
+			"settings":
+			{
+				"buffer_size": 15126,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "tulio_project/tulio_project/static/css/style.css",
+			"settings":
+			{
+				"buffer_size": 4528,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "Searching 4335 files for \"pShowToolBarButton\"\n\n/home/matheus/pyramid_instances/python_enviroment/venv/lib/python2.7/site-packages/pyramid_debugtoolbar-1.0.4-py2.7.egg/pyramid_debugtoolbar/static/css/toolbar.css:\n  137  }\n  138  \n  139: #pDebug a#pShowToolBarButton {\n  140  	display:block;\n  141  	height:75px;\n  ...\n  156  }\n  157  \n  158: #pDebug a#pShowToolBarButton:hover {\n  159  	background-color:#111;\n  160  	padding-right:6px;\n\n/home/matheus/pyramid_instances/python_enviroment/venv/lib/python2.7/site-packages/pyramid_debugtoolbar-1.0.4-py2.7.egg/pyramid_debugtoolbar/static/js/toolbar.js:\n  102            return false;\n  103          });\n  104:         $('#pShowToolBarButton').click(function() {\n  105            pdtb.show_toolbar();\n  106            return false;\n  107          });\n  108:         $(\"#pShowToolBarButton\").hover(function() {\n  109            $(this).data('pTimeout', setTimeout(function() {\n  110              pdtb.show_toolbar(false, true);\n\n/home/matheus/pyramid_instances/python_enviroment/venv/lib/python2.7/site-packages/pyramid_debugtoolbar-1.0.4-py2.7.egg/pyramid_debugtoolbar/templates/toolbar.dbtmako:\n   47      </div>\n   48      <div style=\"display:none; ${button_style}\" id=\"pDebugToolbarHandle\">\n   49: 		<a title=\"Show Toolbar\" id=\"pShowToolBarButton\" href=\"#\">&laquo;</a>\n   50  	</div>\n   51  	% for panel in panels:\n\n5 matches across 3 files\n",
+			"settings":
+			{
+				"buffer_size": 1390,
+				"line_ending": "Unix",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "tulio_project/tulio_project/templates/index.pt",
+			"settings":
+			{
+				"buffer_size": 1241,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "tulio_project/tulio_project/templates/add_files.pt",
+			"settings":
+			{
+				"buffer_size": 978,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "tulio_project/setup.py",
+			"settings":
+			{
+				"buffer_size": 1220,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -388,6 +547,12 @@
 	},
 	"file_history":
 	[
+		"/home/matheus/plone_instances/christiano/1/openehr/rm/datatypes/quantity/DV_ORDERED.py",
+		"/home/matheus/plone_instances/christiano/1/openehr/rm/datatypes/quantity/DV_ABSOLUTE_QUANTITY.py",
+		"/home/matheus/plone_instances/christiano/1/openehr/rm/datatypes/quantity/DV_INTERVAL.py",
+		"/home/matheus/pyramid_instances/tulio_project/tulio_project/index.pt",
+		"/home/matheus/pyramid_instances/tulio_project/tulio_project/index.html",
+		"/home/matheus/pyramid_instances/tulio_project/tulio_project/scripts/initializedb.py",
 		"/home/matheus/pyramid_instances/tutorial/step09/company.p",
 		"/home/matheus/pyramid_instances/python_enviroment/venv/lib/python2.7/site-packages/pyramid-1.4-py2.7.egg/pyramid/decorator.py",
 		"/home/matheus/pyramid_instances/tutorial/step02/application.py",
@@ -429,7 +594,6 @@
 		"/home/matheus/plone_instances/christiano/1/openehr/rm/support/identification/TEMPLATE_ID.py",
 		"/home/matheus/plone_instances/christiano/1/openehr/rm/support/identification/TERMINOLOGY_ID.py",
 		"/home/matheus/plone_instances/christiano/1/openehr/rm/support/identification/UUID.py",
-		"/home/matheus/plone_instances/christiano/1/openehr/rm/datatypes/quantity/DV_ORDERED.py",
 		"/home/matheus/plone_instances/christiano/1/openehr/rm/datatypes/quantity/DV_AMOUNT.py",
 		"/home/matheus/plone_instances/christiano/1/openehr/rm/datatypes/quantity/DV_QUANTIFIED.py",
 		"/home/matheus/plone_instances/christiano/1/openehr/rm/support/basic/Interval.py",
@@ -440,9 +604,7 @@
 		"/home/matheus/plone_instances/christiano/1/openehr/rm/datatypes/quantity/DV_QUANTITY.py",
 		"/home/matheus/plone_instances/christiano/1/openehr/rm/datatypes/quantity/DV_PROPORTION.py",
 		"/home/matheus/plone_instances/christiano/1/openehr/rm/datatypes/quantity/DV_ORDINAL.py",
-		"/home/matheus/plone_instances/christiano/1/openehr/rm/datatypes/quantity/DV_INTERVAL.py",
 		"/home/matheus/plone_instances/christiano/1/openehr/rm/datatypes/quantity/DV_COUNT.py",
-		"/home/matheus/plone_instances/christiano/1/openehr/rm/datatypes/quantity/DV_ABSOLUTE_QUANTITY.py",
 		"/home/matheus/plone_instances/christiano/1/openehr/rm/datatypes/basic/DATA_VALUE.py",
 		"/home/matheus/plone_instances/christiano/1/openehr/rm/datatypes/basic/DV_BOOLEAN.py",
 		"/home/matheus/plone_instances/christiano/1/openehr/rm/datatypes/basic/DV_STATE.py",
@@ -512,10 +674,7 @@
 		"/home/matheus/pyramid_instances/tutorial_workspace/creatingux/step05/index.pt",
 		"/home/matheus/pyramid_instances/tutorial_workspace/creatingux/step06/views.py",
 		"/home/matheus/pyramid_instances/tutorial_workspace/resources/step02/templates/default_view.pt",
-		"/home/matheus/pyramid_instances/tutorial_workspace/resources/step02/application.py",
-		"/home/matheus/pyramid_instances/tutorial_workspace/resources/step01/tests.py",
-		"/home/matheus/pyramid_instances/tutorial_workspace/resources/step01/resources.py",
-		"/home/matheus/pyramid_instances/tutorial_workspace/resources/step01/views.py"
+		"/home/matheus/pyramid_instances/tutorial_workspace/resources/step02/application.py"
 	],
 	"find":
 	{
@@ -523,7 +682,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 96.0,
+		"height": 0.0,
 		"where_history":
 		[
 			"",
@@ -551,6 +710,25 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"T_",
+			"ctime",
+			"path",
+			"ctime",
+			"import ip",
+			">\n",
+			"iNames",
+			"image",
+			"designed",
+			"pShowToolBarButton",
+			"add_",
+			"red",
+			"marg",
+			".pt",
+			"*.py",
+			"thum",
+			"groupfinder",
+			"sqlalchemy",
+			"teste",
 			"CODE_PHRASE",
 			"OBJECT_VERSION_ID",
 			"type",
@@ -659,26 +837,7 @@
 			"resc",
 			"conclude",
 			"visit_c",
-			"desat",
-			"tomorrow",
-			"amanha",
-			"javascript:",
-			"unsc",
-			"desmarcada",
-			"php",
-			"\"",
-			"visit_url",
-			"onclick",
-			"askConfirmation",
-			"showall",
-			"checkHIde",
-			"check",
-			"debugg",
-			"hide",
-			"true",
-			"show",
-			"showAll",
-			"show"
+			"desat"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -698,8 +857,371 @@
 	"groups":
 	[
 		{
+			"selected": 11,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "tulio_project/tulio_project/views.py",
+					"settings":
+					{
+						"buffer_size": 9042,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4321,
+								4321
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2310.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "tulio_project/tulio_project/utils.py",
+					"settings":
+					{
+						"buffer_size": 110,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								89,
+								89
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "tulio_project/tulio_project/models.py",
+					"settings":
+					{
+						"buffer_size": 1490,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								860,
+								860
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 120.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "tulio_project/tulio_project/__init__.py",
+					"settings":
+					{
+						"buffer_size": 1131,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								987,
+								987
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 264.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "tulio_project/tulio_project/security.py",
+					"settings":
+					{
+						"buffer_size": 376,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								376,
+								376
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "tulio_project/tulio_project/templates/login.pt",
+					"settings":
+					{
+						"buffer_size": 2041,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1445,
+								1445
+							]
+						],
+						"settings":
+						{
+							"auto_name": "casa",
+							"syntax": "Packages/XML/XML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "tulio_project/tulio_project/templates/home.pt",
+					"settings":
+					{
+						"buffer_size": 15126,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2601,
+								2601
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/XML/XML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 604.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "tulio_project/tulio_project/static/css/style.css",
+					"settings":
+					{
+						"buffer_size": 4528,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4504,
+								4504
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 4586.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"settings":
+					{
+						"buffer_size": 1390,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										246,
+										264
+									],
+									[
+										351,
+										369
+									],
+									[
+										669,
+										687
+									],
+									[
+										816,
+										834
+									],
+									[
+										1277,
+										1295
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"detect_indentation": false,
+							"output_tag": 1,
+							"result_base_dir": "",
+							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "tulio_project/tulio_project/templates/index.pt",
+					"settings":
+					{
+						"buffer_size": 1241,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1180,
+								1180
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/XML/XML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 330.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "tulio_project/tulio_project/templates/add_files.pt",
+					"settings":
+					{
+						"buffer_size": 978,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								958,
+								958
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/XML/XML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "tulio_project/setup.py",
+					"settings":
+					{
+						"buffer_size": 1220,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								413,
+								413
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -748,6 +1270,38 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"views",
+				"tulio_project/tulio_project/views.py"
+			],
+			[
+				"index",
+				"tulio_project/tulio_project/index.html"
+			],
+			[
+				"inde",
+				"tulio_project/tulio_project/index.pt"
+			],
+			[
+				"secu",
+				"tulio_project/tulio_project/security.py"
+			],
+			[
+				"tulio__init__.py",
+				"tulio_project/tulio_project/__init__.py"
+			],
+			[
+				"init",
+				"tulio_project/tulio_project/scripts/initializedb.py"
+			],
+			[
+				"model",
+				"tulio_project/tulio_project/models.py"
+			],
+			[
+				"view",
+				"tulio_project/tulio_project/views.py"
+			],
 			[
 				"dv_ide",
 				"openehr/rm/datatypes/basic/DV_IDENTIFIER.py"
@@ -915,10 +1469,6 @@
 			[
 				"viewlets",
 				"theme/profiles/default/viewlets.xml"
-			],
-			[
-				"view",
-				"theme/browser/viewlet.pt"
 			],
 			[
 				"patient_view.css",
@@ -1231,34 +1781,6 @@
 			[
 				"develop.cfg",
 				"intranett/development.cfg"
-			],
-			[
-				"testing",
-				"policy/testing.py"
-			],
-			[
-				"test_sle",
-				"policy/tests/test_selenium.py"
-			],
-			[
-				"ftesting",
-				"eggs/gocept.selenium-0.10.1-py2.7.egg/gocept/selenium/grok/ftesting.zcml"
-			],
-			[
-				"debug",
-				"theme/skins/wres_theme_scripts/debug_init.py"
-			],
-			[
-				"admin.py",
-				"archetypes/content/admin.py"
-			],
-			[
-				"set",
-				"policy/setuphandlers.py"
-			],
-			[
-				"se",
-				"theme/skins/wres_theme_js/show_exams.js"
 			]
 		],
 		"width": 0.0

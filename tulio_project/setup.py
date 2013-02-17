@@ -14,6 +14,8 @@ requires = [
     'pyramid_debugtoolbar',
     'zope.sqlalchemy',
     'waitress',
+    'PIL',
+    'pyramid-mailer',
     ]
 
 setup(name='tulio_project',

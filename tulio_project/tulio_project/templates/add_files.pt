@@ -1,0 +1,25 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      metal:define-macro="layout">
+    <head>
+        <title>Tulio Campos</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="description" content="3D Wall Gallery" />
+        <meta name="keywords" content="jquery, perspective, 3D, webkit, safari, gallery, images, thumbnails, slider"/>
+    </head>
+    <body>
+<form action="/store_mp3_view" method="post" accept-charset="utf-8"
+      enctype="multipart/form-data">
+
+    <label for="mp3">File</label>
+    <input id="mp3" name="mp3" type="file" value="" accept="image/*" multiple/>
+    <input id="nome" type="text" value="figuras" />
+    <input type="submit" value="submit" />
+</form>
+    </body>
+</html>
