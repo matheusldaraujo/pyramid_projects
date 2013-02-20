@@ -109,9 +109,22 @@ a.back:hover{
 	color:#fff;
 	text-shadow:1px 1px 1px #000;
 }
+.like-button{
+	float: right;
+	margin-top: 12px;
+	margin-left: 53px;
+	margin-right: 50px;
+	border-radius: 5px;
+	background-color: white;
+	height: 25px;
+	width: 300px;
+}
+
+
+
 .header a.reference{
 	text-decoration:none;
-	font-size:12px;
+	font-size:8px;
 	font-weight:bold;
 	line-height:50px;
 	color:#a0a0a0;
@@ -260,7 +273,7 @@ ul.pg_photos li img{
 }
 
 /* You can customize to your needs  */
-.login-popup, .upload-popup{
+.login-popup, .upload-popup, .contact-popup{
 	display:none;
 	background: #333;
 	padding: 10px; 	
@@ -301,6 +314,26 @@ form.signin p, form.signin span {
 	font-size:11px; 
 	line-height:18px;
 } 
+
+textarea.textbox{
+	display:block; 
+	padding-bottom:7px; 
+	color:#999; 
+	font-size:11px; 
+	line-height:18px;
+	background:#666666; 
+	border-bottom:1px solid #333;
+	border-left:1px solid #000;
+	border-right:1px solid #333;
+	border-top:1px solid #000;
+	color:#fff; 
+        border-radius: 3px 3px 3px 3px;
+	-moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+	font:13px Arial, Helvetica, sans-serif;
+	padding:6px 6px 4px;
+	width:200px;
+}
 
 form.signin .textbox input { 
 	background:#666666; 

@@ -37,7 +37,7 @@ def main(argv=sys.argv):
     Base.metadata.create_all(engine)
     with transaction.manager:
         model = MyModel(name='two', value=2)
-        usuario = UserModel(name="cesar", login="cs",senha="c")
+        usuario = UserModel(name="Tulio Campos", login="tuliocampos",senha="tcampos0310")
         # imagem = ImageModel(name="teste.png")
         DBSession.add(model)
         DBSession.add(usuario)

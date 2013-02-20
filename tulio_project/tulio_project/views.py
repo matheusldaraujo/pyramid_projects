@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 print "view"
 from pyramid.response import Response
 from pyramid.view import view_config
@@ -25,12 +26,21 @@ import transaction
 @view_config(name="send_email")
 def send_email(request):
     mailer = request.registry['mailer']
-    message = Message(subject="hello world",
+
+    name = request.POST["name"]
+    email = request.POST["email"]
+    assunto = request.POST["assunto"]
+    content = request.POST["content_message"]
+
+    message = Message(subject="Contato Pelo Site",
                   sender="0matheus.araujo0@gmail.com",
                   recipients=["matheus.ld.araujo@gmail.com"],
-                  body="{\rtf1\ansi{\fonttbl\f0\fswiss Helvetica;}\f0\pard \n This is some {\b bold} text.\par}")
-    mailer.send_immediately(message, fail_silently=False)
-    return Response("Ok")
+                  body="Nome: %s\nEmail: %s \nAssunto: %s \nConteudo: %s \n" % (name,email,assunto,content))
+    try:
+        mailer.send_immediately(message, fail_silently=False)
+    except:
+        return Response("Desculpe houve um problema no envio")
+    return HTTPFound(location = "/")
 
 
 def view(request):
@@ -156,7 +166,21 @@ def my_python(request):
     if authenticated_userid(request):
         message = "Favor realizar logout antes de tentar logar novamente"
         showLogin = False
-    if 'form.submitted' in request.params:
+    if 'login.submitted' in request.params:
+        print "submitted"
+        login = request.params['login']
+        user = groupfinder(login,request)
+        if user != None:
+            print "\tlogin tentado", login
+            password = request.params['password']
+            print "\tsemja tentado", password
+            if user.senha == password:
+                headers = remember(request, login)
+                return HTTPFound(location = came_from,
+                    headers = headers)
+        message = '<i>Failed login</i>'
+        showLogin = True
+    if 'contato.submitted' in request.params:
         print "submitted"
         login = request.params['login']
         user = groupfinder(login,request)
@@ -190,43 +214,43 @@ def my_python(request):
     # return {'one': one, 'project': 'Tulio Project', 'users':usersDB,'logged':logged_in,
     #         "listImages":imagesFile,'listThumbs':thumbsFile,'listSmallThumbs':smallthumbsFile}
 
-@view_config(name='login',renderer="templates/login.pt")
-def login_before(request):
-    login_url = request.resource_url(request.context, 'login')
-    referrer = request.url
-    if referrer == login_url:
-        referrer = '/' # never use the login form itself as came_from, go to index
-    came_from = request.params.get('came_from', referrer)
-    message = ''
-    login = ''
-    password = ''
-    showLogin = True
-    if authenticated_userid(request):
-        message = "Favor realizar logout antes de tentar logar novamente"
-        showLogin = False
-    if 'form.submitted' in request.params:
-        print "submitted"
-        login = request.params['login']
-        user = groupfinder(login,request)
-        if user != None:
-            print "\tlogin tentado", login
-            password = request.params['password']
-            print "\tsemja tentado", password
-            if user.senha == password:
-                headers = remember(request, login)
-                return HTTPFound(location = came_from,
-                    headers = headers)
-        message = '<i>Failed login</i>'
-        showLogin = True
+# @view_config(name='login',renderer="templates/login.pt")
+# def login_before(request):
+#     login_url = request.resource_url(request.context, 'login')
+#     referrer = request.url
+#     if referrer == login_url:
+#         referrer = '/' # never use the login form itself as came_from, go to index
+#     came_from = request.params.get('came_from', referrer)
+#     message = ''
+#     login = ''
+#     password = ''
+#     showLogin = True
+#     if authenticated_userid(request):
+#         message = "Favor realizar logout antes de tentar logar novamente"
+#         showLogin = False
+#     if 'form.submitted' in request.params:
+#         print "submitted"
+#         login = request.params['login']
+#         user = groupfinder(login,request)
+#         if user != None:
+#             print "\tlogin tentado", login
+#             password = request.params['password']
+#             print "\tsemja tentado", password
+#             if user.senha == password:
+#                 headers = remember(request, login)
+#                 return HTTPFound(location = came_from,
+#                     headers = headers)
+#         message = '<i>Failed login</i>'
+#         showLogin = True
 
-    return dict(
-        message = message,
-        url = request.application_url + '/login',
-        came_from = came_from,
-        login = login,
-        password = password,
-        showLogin = showLogin,
-        )
+#     return dict(
+#         message = message,
+#         url = request.application_url + '/login',
+#         came_from = came_from,
+#         login = login,
+#         password = password,
+#         showLogin = showLogin,
+#         )
 
 @view_config(name='logout')
 def logout(request):

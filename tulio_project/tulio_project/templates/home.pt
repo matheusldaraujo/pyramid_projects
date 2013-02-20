@@ -28,18 +28,32 @@
 			<div id="pg_scrollWrapper" class="pg_scrollWrapper">
 				<div id="slider" class="slider"></div>
 			</div>
+
 			<a tal:condition="not: logged" href="#login-box" class="login-window insideText">Login</a>
 			<a tal:condition="logged" href="#upload-box" class="upload-window insideText">+ Desenhos</a>
 			<a tal:condition="logged" class="insideText" href="/logout">Logout</a>
+			<a  href="#contact-box" class="contact-window insideText">Contato</a>
+			<a class="reference" href="http://tympanus.net/codrops/" target="_blank">designed By Mary Lou</a>
+<span class="like-button"><iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fmatheus-araujo.com%2Fminhaimagem&amp;send=false&amp;layout=standard&amp;width=450&amp;show_faces=true&amp;font&amp;colorscheme=light&amp;action=like&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:80px;" allowTransparency="true"></iframe></span>
 <!-- 			<a class="reference" href="http://www.matheus-araujo.com" target="_blank">designed by Matheus Araujo</a> -->
 		</div>
+		<!-- =================================================
+				WALL 
+			 =================================================
+		 -->
 		<div class="wall">
 			<div id="pg_container" class="pg_container">
 				<ul id="pg_photos" class="pg_photos"><!-- calculate top-->
 					<li tal:repeat="image listThumbs"><a href="#${repeat.image.number}"><img class="bigDraw" src="${image.url}" alt="${image.mtime}"/></a></li>
 				</ul>
+				
+
 			</div>
 		</div>
+		<!-- =================================================
+				LOGO
+			 =================================================
+		 -->
 		<div class="marcaDiv">
 			<img class="marca" src="/static/images/marcatransparenteSmall.png"/>
 		</div>
@@ -53,13 +67,13 @@
 	                <fieldset class="textbox">
 	            	<label class="username">
 	                <span>Login</span>
-	                <input type="text" name="login" value="${login}" id="username" autocomplete="on" placeholder="Username">
+	                <input type="text" name="login" value="${login}" id="username" autocomplete="on" placeholder="Username"/>
 	                </label>
 	                <label class="password">
 	                <span>Senha</span>
-	                <input type="password" name="password" value="${password}" placeholder="Password">
+	                <input type="password" name="password" value="${password}" placeholder="Password"/>
 	                </label>
-	                <button type="submit" name="form.submitted" value="Log In" class="submit button">Entrar</button>
+	                <button type="submit" name="login.submitted" value="Log In" class="submit button">Entrar</button>
 	                </fieldset>
 	          </form>
 		</div>
@@ -84,7 +98,38 @@
 	            </fieldset>
 			</form>
 		</div>
-
+		<!-- =================================================
+				CONTACT SCREEN
+			 =================================================
+		 -->
+		<div id="contact-box" class="contact-popup">
+	        <a href="#" class="close" style="color:white">X</a>
+	          <form method="post" class="signin" accept-charset="utf-8" action="/send_email">
+	                <fieldset class="textbox">
+	            	<label class="username">
+	                <span>Nome:</span>
+	                <input type="text" name="name" value="" id=""/>
+	                </label>
+	            	<label class="username">
+	                <span>Email:</span>
+	                <input type="text" name="email" value="seu@email.com" id="email">
+	                </label>
+	                <label class="textbox">
+	                <span>Assunto:</span>
+	                <input type="text" name="assunto" value=""/>
+	                </label>
+	                <label class="textbox">
+	                <span>Conteúdo:</span>
+	                <textarea name="content_message" class="textbox" rows="5" cols="60" value="Here's some text."></textarea>
+	                </label>
+	                <button type="submit" name="contact.submitted" value="Log In" class="submit button">Envar</button>
+	                </fieldset>
+	          </form>
+		</div>
+		<!-- =================================================
+				FOOTER
+			 =================================================
+		 -->
 		<div class="footer">
 			<a class="back left" href="http://www.pylonsproject.org/"> <img src="/static/images/pyramid_powered_148x45.png" /></a>
 			<div class="thumbnailSlider" id="thumbnailSlider">
@@ -100,15 +145,20 @@
 					</li>
 				</ul>
 			</div>
-			<a class="back right" href="http://www.matheus-araujo.com">designed by Matheus Araújo</a>
-			
+			<a class="back right" href="http://www.matheus-araujo.com">development by Matheus Araújo</a>
+		
 		</div>
+		<!-- =================================================
+				JAVASCRIPT
+			 =================================================
+		 -->
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
 		<script type="text/javascript" src="static/js/jquery.easing.1.3.js"></script>
 		<script type="text/javascript" src="static/js/jquery.ba-hashchange.min.js"></script>
 		<script type="text/javascript" src="static/js/jquery-mousewheel-3.0.4/jquery.mousewheel.min.js"></script>
 		
+
         <script type="text/javascript">
 			/*
 			the images preload plugin
@@ -133,6 +183,25 @@
 			})(jQuery);
 		</script>
 		<script type="text/javascript">
+			//=========================================
+			//Change cursor in right button textarea
+			//=========================================
+			$("textarea").mousemove(function(e) {
+		        var myPos = $(this).offset();
+		        myPos.bottom = $(this).offset().top + $(this).outerHeight();
+		        myPos.right = $(this).offset().left + $(this).outerWidth();
+		        
+		        if (myPos.bottom > e.pageY && e.pageY > myPos.bottom - 16 && myPos.right > e.pageX && e.pageX > myPos.right - 16) {
+		            $(this).css({ cursor: "nw-resize" });
+		        }
+		        else {
+		            $(this).css({ cursor: "" });
+		        }
+		    })
+
+		    //=========================================
+		    //Gallery Javascript core
+		    //=========================================
 			$("#imgs").change(function() { 
 				$("#fake")[0].innerHTML = "Upload: " + $("#imgs")[0].files.length + " Imagens"
 			});
@@ -307,7 +376,9 @@
 			})(jQuery);
 		</script>
 		<script type="text/javascript">
-
+			//=========================================
+		    //Modal LOGIN UPLOAD CONTACT
+		    //=========================================
 
 			$(function() {
 				var $thumbnailSlider= $('#thumbnailSlider'),
@@ -386,20 +457,43 @@
 							}
 						});
 				}
+				function addCommentHandler(){
+
+					  		$(this).unbind('click')
+					  		$(this).find(".addComment").html("<form>\
+					  		<span style=\"position:relative;top:-20%;padding: 5px;\">Nome:\
+	                		<input type=\"text\" name=\"comment\" style=\"float:right\" value=\"\"/>\<br\><br\>\
+	                		<span style=\"position:relative;top:-20%;padding: 5px;\">Comentário:\
+	                		<input type=\"text\" name=\"comment\" style=\"float:right\" value=\"\"/>\
+	                		<input type=\"submit\" name=\"addcomments.form\" value=\"Submit\" />\
+	            	   		</form>")
+				}
+				//=============================
+				//Enter submit addcomment form
+				//=============================
+				$("input").keypress(function(event) {
+				    if (event.which == 13) {
+				        event.preventDefault();
+				        $("addcomments.form").submit();
+				    }
+				});
 				function initEvents(){
 					//if we mouse over a photo, show the description sored in the alt attr
 					$pg_photos_elem.bind('mouseenter',function(e){
 						var $e		= $(this);
 							$img	= $e.find('img'),
-							descr	= $img.attr('alt');
+							descr	= 'Clique para escrever um comentário.<br/><br/>Enter para enviar.'
 						
-						$('<span>'+ descr +'</span>').hide().insertAfter($img).fadeIn();
+						$('<span class="addComment" style="border-radius: 5px;padding: 10px;">'+ descr +'</span>').hide().insertAfter($img).fadeIn();
 					}).bind('mouseleave',function(e){
 						var $e		= $(this);
 							$descr	= $e.find('span');
-						
+						$(this).bind('click',addCommentHandler)
+
 						$descr.fadeOut();
-				});
+				}).bind('click',addCommentHandler);
+
+
 				
 					//slide as we scroll with the mouse
 						$pg_container.mousewheel(function(e, delta) {
@@ -434,28 +528,28 @@
 							return false;
 						});
 						
-						$(window).hashchange( function(){
+						//$(window).hashchange( function(){
 						//the index in the url hash
-							var idx 			= location.hash.split('#')[1];
-						if(!idx){
+						//	var idx 			= location.hash.split('#')[1];
+						//if(!idx){
 							//we assume the current is the first one,
 							//so set the first thumb nav elem as selected
-							$thumbnailSlider.thumbnailSlider('update',0);
-							return;
-						}
+//							$thumbnailSlider.thumbnailSlider('update',0);
+							//return;
+						//}
 						//set the thumb nav elem as selected
-						$thumbnailSlider.thumbnailSlider('update',idx-1);
+//						$thumbnailSlider.thumbnailSlider('update',idx-1);
 						//based on the current left value for the pg_photos, 
 						//and the left of the element, we know how much to slide
-							var	current_left 	= parseFloat($pg_photos.css('left'),10),
-							elem_left		= $pg_photos_elem.eq(idx-1).offset().left;
+//							var	current_left 	= parseFloat($pg_photos.css('left'),10),
+//							elem_left		= $pg_photos_elem.eq(idx-1).offset().left;
 						//update the ui slider 
-							$slider.slider('value',Math.abs(parseInt(current_left - elem_left,10)));
+//							$slider.slider('value',Math.abs(parseInt(current_left - elem_left,10)));
 						//slide to element
-							$pg_photos.stop().animate({
-								left	: current_left - elem_left + 'px'
-							},800,'easeInOutExpo');
-						});
+//							$pg_photos.stop().animate({
+//								left	: current_left - elem_left + 'px'
+//							},800,'easeInOutExpo');
+//						});
 					}
 			});
 
@@ -507,6 +601,30 @@
 					
 					return false;
 				});
+
+				$('a.contact-window').click(function() {
+					
+			                //Getting the variable's value from a link 
+					var contactBox = $(this).attr('href');
+
+					//Fade in the Popup
+					$(contactBox).fadeIn(300);
+					
+					//Set the center alignment padding + border see css style
+					var popMargTop = ($(contactBox).height() + 24) / 2; 
+					var popMargLeft = ($(contactBox).width() + 24) / 2; 
+					
+					$(contactBox).css({ 
+						'margin-top' : -popMargTop,
+						'margin-left' : -popMargLeft
+					});
+					
+					// Add the mask to body
+					$('body').append('<div id="mask"></div>');
+					$('#mask').fadeIn(300);
+					
+					return false;
+				});
 				
 				// When clicking on the button close or the mask layer the popup closed
 				$('a.close, #mask').live('click', function() { 
@@ -516,6 +634,9 @@
 				  $('#mask , .upload-popup').fadeOut(300 , function() {
 					$('#mask').remove();  
 					}); 
+				  $('#mask , .contact-popup').fadeOut(300 , function() {
+					$('#mask').remove();  
+					});
 				return false;
 				});
 			});
