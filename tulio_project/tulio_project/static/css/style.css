@@ -67,6 +67,9 @@ a{
 	text-shadow:1px 1px 1px #000;
 	text-decoration:underline;
 }
+.deleteComment:hover{
+	cursor:pointer;
+}
 .header, .footer{
 	width:100%;
 	background:#423B30;
@@ -122,7 +125,7 @@ a.back:hover{
 
 
 
-.header a.reference{
+ .reference{
 	text-decoration:none;
 	font-size:8px;
 	font-weight:bold;
@@ -132,7 +135,7 @@ a.back:hover{
 	float:right;
 	text-shadow:1px 1px 1px #000;
 }
-.header a.reference:hover{
+ .reference:hover{
 	color:#fff;
 }
 .wall{
@@ -194,6 +197,92 @@ ul.pg_photos li a span{
 ul.pg_photos li img{
 	display:block;
 	border:none;
+}
+.caixaComentario{
+	padding: 1px;
+    color: #ffffff;
+    position: absolute;
+    bottom: 50px;
+    left:0px;
+    height: 200px;
+    text-align: left;
+    width: 30%;
+
+    background:#423B30;
+	opacity:0.8;
+	position:absolute;
+	text-shadow:1px 1px 1px #000;
+	color:#fff;
+	-moz-box-shadow:1px 0px 2px #000 inset;
+	-webkit-box-shadow:1px 0px 2px #000 inset;
+	box-shadow:1px 0px 2px #000 inset;
+	overflow:scroll;
+	overflow-x: hidden;
+	border-radius: 5px;
+
+	-webkit-transition: all 0.5s ease-in-out;
+  	-moz-transition: all 0.5s ease-in-out;
+  	-o-transition: all 0.5s ease-in-out;
+  	transition: all 0.5s ease-in-out;
+}
+
+.caixaComentarioDown{
+	padding: 1px;
+    color: #ffffff;
+    position: absolute;
+    bottom: 50px;
+    left:0px;
+    height: 25px;
+    text-align: left;
+    width: 150px;
+
+    background:#423B30;
+	opacity:0.8;
+	position:absolute;
+	text-shadow:1px 1px 1px #000;
+	color:#fff;
+	-moz-box-shadow:1px 0px 2px #000 inset;
+	-webkit-box-shadow:1px 0px 2px #000 inset;
+	box-shadow:1px 0px 2px #000 inset;
+	border-radius: 5px;
+
+	-webkit-transition: all 0.5s ease-in-out;
+  	-moz-transition: all 0.5s ease-in-out;
+  	-o-transition: all 0.5s ease-in-out;
+  	transition: all 0.5s ease-in-out;
+}
+.commentImg{
+	position:relative;
+    /*width:30%;*/
+    max-height:30%;
+    left:0px;
+    top:0px;
+    border:1px solid black;
+
+}
+
+#commentsTable{
+	width: 98%;
+	word-wrap:break-all;
+}
+
+#downArrow{
+	float:right;
+}
+#downArrow:hover{
+	cursor:pointer;
+}
+.nameComment{
+	font-size: 12px;
+	font-weight: bold;
+}
+.commentComment{
+	font-size: 12px;
+
+}
+#comentariosTitle{
+	font-size: 15px;
+	color:white;
 }
 .footer{
 	position:fixed;

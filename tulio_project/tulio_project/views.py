@@ -10,6 +10,7 @@ from os import listdir
 from pyramid.security import authenticated_userid, remember, forget
 from pyramid_mailer import get_mailer
 from pyramid_mailer.message import Message
+import json
 
 from .security import groupfinder
 from .utils import fileType
@@ -17,6 +18,7 @@ from .models import (
     DBSession,
     MyModel,
     UserModel,
+    CommentModel,
     )
 import transaction
 
@@ -41,6 +43,60 @@ def send_email(request):
     except:
         return Response("Desculpe houve um problema no envio")
     return HTTPFound(location = "/")
+
+@view_config(name="addComment", renderer="json")
+def add_comment(request):
+    name = request.GET['name']
+    comment = request.GET['comment']
+    imgid = request.GET['imgid']
+    dbComentario = CommentModel(name = name,comment= comment,imgid=imgid)
+    try:
+        DBSession.add(dbComentario)
+    except :
+        return {"message":"Houve um problema.<br/>Avise o desenvolvedor."}
+    return {"message": "Comentario salvo com sucesso.<br/>"}
+
+@view_config(name="getComments", renderer="json")
+def get_comment(request):
+    try:
+        comments = DBSession.query(CommentModel).order_by("id desc").all()
+        
+    except :
+        return {"message":"Houve um problema.<br/>Avise o desenvolvedor."}
+    
+    toReturn = []
+    for comment in comments:
+        d = {}
+        d['comment'] = comment.comment
+        d['name'] = comment.name
+        d['imgid'] = comment.imgid
+        d['id'] = comment.id
+        toReturn.append(d)
+    return json.dumps(toReturn)
+
+@view_config(name="removeImg", renderer="json")
+def remove_img(request):
+    pathThumb = request.GET['path']
+    pathImgOriginal = "/static/personal_images/" + pathThumb.split("/")[-1][2:]
+    pathSmallThumb = "/static/personal_images/smallthumbs/" +"S" + pathThumb.split("/")[-1]
+
+    import os
+    try:
+        os.remove("./tulio_project" + pathThumb)
+        os.remove("./tulio_project" + pathImgOriginal)
+        os.remove("./tulio_project" + pathSmallThumb)
+    except:
+        return {'message':'Houve um erro ao deletar os arquivos, contate o desenvolvedor.'}
+    return {"message":"ok"}
+
+@view_config(name="deleteComment", renderer="json")
+def delete_comment(request):
+    id = request.GET['id']
+    try:
+        DBSession.query(CommentModel).filter_by(id = id).delete()
+    except :
+        return {"message":"Houve um problema.<br/>Avise o desenvolvedor."}
+    return {"message": "Comentário deletado"}
 
 
 def view(request):
@@ -272,6 +328,8 @@ def store_script(request):
     FILES = request.POST.getall('imgs')
     for FILE in FILES:
         filename = quote_plus(FILE.filename)
+        filename = filename.replace("%","")
+
         print filename
         input_file = FILE.file
         file_path = os.path.join('./tulio_project/static/personal_images', filename)

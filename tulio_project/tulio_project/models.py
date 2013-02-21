@@ -48,6 +48,22 @@ class UserModel(Base):
         self.login = login
         self.senha = senha
 
+class CommentModel(Base):
+    print "UserModel"
+    __acl__ = [ (Allow, Everyone, 'view'),
+            (Allow, 'group:editors', 'edit') ]
+            
+    __tablename__ = 'comentarios'
+    id = Column(Integer, primary_key=True)
+    name = Column(Text,nullable=True)
+    comment = Column(Text,nullable=True)
+    imgid = Column(Text, nullable=False)
+
+    def __init__(self, name, comment, imgid):
+        self.name = name
+        self.comment = comment
+        self.imgid = imgid
+
 # class ImageModel(Base):
 #     print "ImageModel"
 #     __tablename__ = 'imagens'
