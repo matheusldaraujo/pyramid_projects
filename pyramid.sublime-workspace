@@ -424,10 +424,34 @@
 	"buffers":
 	[
 		{
+			"file": "tulio_project/tulio_project/static/js/documentLoad.js",
+			"settings":
+			{
+				"buffer_size": 2281,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "tulio_project/tulio_project/static/js/preloadPlugin.js",
+			"settings":
+			{
+				"buffer_size": 573,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "tulio_project/tulio_project/static/css/style.css",
+			"settings":
+			{
+				"buffer_size": 9580,
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "tulio_project/tulio_project/templates/home.pt",
 			"settings":
 			{
-				"buffer_size": 30808,
+				"buffer_size": 9531,
 				"line_ending": "Windows"
 			}
 		},
@@ -440,11 +464,14 @@
 			}
 		},
 		{
-			"file": "tulio_project/tulio_project/static/css/style.css",
+			"contents": "print \"__init__\"\nfrom pyramid.config import Configurator\nfrom sqlalchemy import engine_from_config\nfrom pyramid.authentication import AuthTktAuthenticationPolicy\nfrom pyramid.authorization import ACLAuthorizationPolicy\nfrom pyramid_mailer import Mailer\nfrom .security import groupfinder\n\nfrom .models import (\n    DBSession,\n    Base,\n    )\n\n\n\ndef main(global_config, **settings):\n    \"\"\" This function returns a Pyramid WSGI application.\n    \"\"\"\n    print \"main __init__\"\n    engine = engine_from_config(settings, 'sqlalchemy.')\n    DBSession.configure(bind=engine)\n    Base.metadata.bind = engine\n    config = Configurator(settings=settings)\n    \n    #Security Stuff\n    authn_policy = AuthTktAuthenticationPolicy(secret='sosecret', callback=groupfinder)\n    authz_policy = ACLAuthorizationPolicy()\n    config.set_authentication_policy(authn_policy)\n    config.set_authorization_policy(authz_policy)\n\n    #Url stuff\n    config.add_static_view('static', 'images/personal_images', cache_max_age=3600)\n    config.add_static_view('static', 'static', cache_max_age=3600)\n    config.add_route('home', '/old')\n    config.add_route('index', '/')\n    config.add_route('store_script', '/store_mp3_view')\n\n    #Includes\n    config.include('pyramid_mailer')\n    config.registry['mailer'] = Mailer.from_settings(settings)\n\n    #start\n    config.scan()\n    return config.make_wsgi_app()\n",
+			"file": "tulio_project/tulio_project/__init__.py",
+			"file_size": 1375,
+			"file_write_time": 1361422351000000,
 			"settings":
 			{
-				"buffer_size": 9580,
-				"line_ending": "Windows"
+				"buffer_size": 1375,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -516,13 +543,19 @@
 	},
 	"file_history":
 	[
+		"/home/matheus/Dropbox/Linux/newServer.sh",
 		"/home/matheus/pyramid_instances/tulio_project/tulio_project/views.py",
+		"/home/matheus/pyramid_instances/tulio_project/tulio_project/static/js/personalize.js",
+		"/home/matheus/pyramid_instances/tulio_project/tulio_project/static/js/galleryCore.js",
+		"/home/matheus/pyramid_instances/tulio_project/setup.cfg",
+		"/home/matheus/pyramid_instances/tulio_project/tulio_project/tests.py",
+		"/home/matheus/pyramid_instances/tulio_project/tulio_project/templates/home.pt",
+		"/home/matheus/pyramid_instances/MyProjectTutorial/myprojecttutorial/tests.py",
 		"/home/matheus/pyramid_instances/tulio_project/tulio_project/models.py",
 		"/home/matheus/pyramid_instances/tulio_project/tulio_project/scripts/initializedb.py",
 		"/home/matheus/pyramid_instances/tulio_project/tulio_project/__init__.py",
 		"/home/matheus/pyramid_instances/tulio_project/development.ini",
 		"/home/matheus/pyramid_instances/tulio_project/tulio_project/static/css/style.css",
-		"/home/matheus/pyramid_instances/tulio_project/tulio_project/templates/home.pt",
 		"/home/matheus/pyramid_instances/.gitignore",
 		"/home/matheus/pyramid_instances/tulio_project/tulio_project/3DWallGallery/index.html",
 		"/home/matheus/pyramid_instances/MyProjectTutorial/development.ini",
@@ -530,7 +563,6 @@
 		"/home/matheus/pyramid_instances/tulio_project/tulio_project/templates/add_files.pt",
 		"/home/matheus/pyramid_instances/tulio_project/tulio_project/templates/index.pt",
 		"/home/matheus/pyramid_instances/tulio_project/tulio_project/security.py",
-		"/home/matheus/pyramid_instances/tulio_project/tulio_project/tests.py",
 		"/home/matheus/pyramid_instances/tulio_project/tulio_project/utils.py",
 		"/home/matheus/plone_instances/christiano/1/checkFiles.py",
 		"/home/matheus/plone_instances/christiano/1/openehr/checkFiles.py",
@@ -638,12 +670,7 @@
 		"/home/matheus/aspell6-pt_BR-20090702-0/README",
 		"/media/8EFA64F6FA64DC49/Hannibal.Rising[2007]DvDrip[Eng]-aXXo/IMPORTANT.Read carefully before enjoy this movie.txt",
 		"/home/matheus/plone_instances/communi/1/src/wres.theme/wres/theme/skins/wres_theme_js/patient_view.js",
-		"/home/matheus/plone_instances/communi/1/src/wres.theme/wres/theme/locales/pt-br/LC_MESSAGES/0_d_tour_inicial.po",
-		"/home/matheus/plone_instances/communi/1/src/wres.theme/wres/theme/locales/pt-br/LC_MESSAGES/0_S_tour_inicial.po",
-		"/home/matheus/plone_instances/communi/1/src/wres.theme/wres/theme/locales/pt-br/LC_MESSAGES/1_d_registro_rapido.po",
-		"/home/matheus/plone_instances/communi/1/src/wres.theme/wres/theme/locales/pt-br/LC_MESSAGES/1_S_registro_rapido.po",
-		"/home/matheus/plone_instances/communi/1/src/wres.theme/wres/theme/locales/pt-br/LC_MESSAGES/1_S_registro_rapido.po_",
-		"/home/matheus/plone_instances/communi/1/src/wres.theme/wres/theme/locales/pt-br/LC_MESSAGES/2_d_cadastrar_consulta.po"
+		"/home/matheus/plone_instances/communi/1/src/wres.theme/wres/theme/locales/pt-br/LC_MESSAGES/0_d_tour_inicial.po"
 	],
 	"find":
 	{
@@ -679,6 +706,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"						",
+			"			\n",
+			"preload",
+			"thumbnailSlider",
 			"2000",
 			"developme",
 			"pathImage",
@@ -802,11 +833,7 @@
 			"_make",
 			"gro",
 			"forb",
-			"fieldset",
-			"internalTable",
-			"Doctor",
-			"show_visi",
-			"content"
+			"fieldset"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -827,60 +854,59 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 5,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "tulio_project/tulio_project/templates/home.pt",
+					"file": "tulio_project/tulio_project/static/js/documentLoad.js",
 					"settings":
 					{
-						"buffer_size": 30808,
+						"buffer_size": 2281,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								24427,
-								24427
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/XML/XML.tmLanguage",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 13632.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "tulio_project/tulio_project/views.py",
+					"file": "tulio_project/tulio_project/static/js/preloadPlugin.js",
 					"settings":
 					{
-						"buffer_size": 13855,
+						"buffer_size": 573,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								11765,
-								11765
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 7260.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -907,6 +933,89 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 2346.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "tulio_project/tulio_project/templates/home.pt",
+					"settings":
+					{
+						"buffer_size": 9531,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								305,
+								305
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/XML/XML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "tulio_project/tulio_project/views.py",
+					"settings":
+					{
+						"buffer_size": 13855,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								10856,
+								10856
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 6578.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "tulio_project/tulio_project/__init__.py",
+					"settings":
+					{
+						"buffer_size": 1375,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								956,
+								956
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 198.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -960,12 +1069,24 @@
 		"selected_items":
 		[
 			[
-				"sty",
-				"tulio_project/tulio_project/static/css/style.css"
-			],
-			[
 				"views",
 				"tulio_project/tulio_project/views.py"
+			],
+			[
+				"home.pt",
+				"tulio_project/tulio_project/templates/home.pt"
+			],
+			[
+				"test",
+				"tulio_project/tulio_project/tests.py"
+			],
+			[
+				"setup",
+				"tulio_project/setup.cfg"
+			],
+			[
+				"sty",
+				"tulio_project/tulio_project/static/css/style.css"
 			],
 			[
 				"home",
@@ -990,10 +1111,6 @@
 			[
 				".css",
 				"tulio_project/tulio_project/3DWallGallery/css/style.css"
-			],
-			[
-				"home.pt",
-				"tulio_project/tulio_project/templates/home.pt"
 			],
 			[
 				"style",
@@ -1462,14 +1579,6 @@
 			[
 				"chart",
 				"theme/skins/wres_theme_templates/patient_chart_macros.pt"
-			],
-			[
-				"test_cre",
-				"policy/tests/test_create_appointment.py"
-			],
-			[
-				"test_sele",
-				"policy/tests/test_selenium.py"
 			]
 		],
 		"width": 0.0

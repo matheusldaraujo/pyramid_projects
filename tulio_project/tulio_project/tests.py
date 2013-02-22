@@ -48,7 +48,6 @@ class TestViews(unittest.TestCase):
         from .views import send_email
 
         request = DummyRequest()
-        import ipdb;ipdb.set_trace()
         mailer = get_mailer(request)
         response = send_email(request)
         
