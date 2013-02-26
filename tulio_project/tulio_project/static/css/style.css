@@ -480,3 +480,9 @@ padding: 6px 6px 4px;
 
 
 }
+
+.zoom:hover{
+	cursor: pointer;
+	text-shadow:1px 1px 1px #000;
+	text-decoration:underline;
+}

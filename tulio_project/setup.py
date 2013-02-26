@@ -14,7 +14,7 @@ requires = [
     'pyramid_debugtoolbar',
     'zope.sqlalchemy',
     'waitress',
-    'PIL',
+    'pillow',
     'pyramid-mailer',
     ]
 

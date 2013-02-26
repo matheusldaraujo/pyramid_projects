@@ -31,7 +31,6 @@
 			<!-- Logged variable for javascript-->
 			<input tal:condition="logged" id="logged" value="1" type="hidden"/>
 			<input tal:condition="not: logged" id="logged" value="0" type="hidden"/>
-
 			<a tal:condition="not: logged" href="#login-box" class="login-window insideText">Login</a>
 			<a tal:condition="logged" href="#upload-box" class="upload-window insideText">+ Desenhos</a>
 			<a tal:condition="logged" class="insideText" href="/logout">Logout</a>
@@ -46,7 +45,11 @@
 		<div class="wall">
 			<div id="pg_container" class="pg_container">
 				<ul id="pg_photos" class="pg_photos"><!-- calculate top-->
-					<li tal:repeat="image listThumbs"><a href="#${repeat.image.number}"><img class="bigDraw" src="${image.url}" alt="${image.url}"/></a></li>
+					<li tal:repeat="image listThumbs">
+						<a href="#${repeat.image.number}">
+							<img class="bigDraw" src="${image.url}" alt="${image.url}"/></a>
+						<input id="fullSize" type="hidden" value="${listImages[repeat.image.number-1].url}"/>
+					</li>
 				</ul>
 				
 

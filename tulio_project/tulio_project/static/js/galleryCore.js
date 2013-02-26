@@ -324,12 +324,25 @@ $(function() {
 				addCommentHandler(addComment)
 			})
 
+			//==============================
+			//ZOOM
+			//==============================
+
+			zoom = $('<span class="zoom" style="border-radius: 5px;padding: 10px;top:80%;right:80%;left:0px;text-align:center"> + Zoom</span>')
+			zoom.hide().insertAfter($img).fadeIn();
+
+			zoom.bind('click',function(){
+				window.location.href = $(this.parentNode.parentNode).find("#fullSize").val()
+			})
+
 		}).bind('mouseleave',function(e){
 			var $e		= $(this);
 				$descr	= $e.find('span');
 			
 			$(".addComment").fadeOut();
 			$(".addComment").removeClass("addComment")
+			$(".zoom").fadeOut();
+			$(".zoom").removeClass("zoom")
 			$(".removeImg").hide();
 
 	});
