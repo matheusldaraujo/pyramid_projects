@@ -29,6 +29,7 @@ def main(global_config, **settings):
     config.set_authorization_policy(authz_policy)
 
     #Url stuff
+    config.add_static_view('images', 'static/personal_images', cache_max_age=3600)
     config.add_static_view('static', 'static', cache_max_age=3600)
     config.add_route('home', '/old')
     config.add_route('index', '/')
