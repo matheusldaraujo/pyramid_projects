@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      metal:define-macro="layout">
+    <head>
+        <title>Tulio Campos</title>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="description" content="3D Wall Gallery" />
+        <meta name="keywords" content="jquery, perspective, 3D, webkit, safari, gallery, images, thumbnails, slider"/>
+		<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
+		<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/themes/ui-lightness/jquery.ui.theme.css" type="text/css" media="all" />
+		<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/themes/ui-lightness/jquery.ui.core.css" type="text/css" media="all" />
+		<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/themes/ui-lightness/jquery.ui.slider.css" type="text/css" media="all" />
+		<link rel="stylesheet" href="static/css/style.css" type="text/css" media="screen"/>
+		<link rel="stylesheet" href="static/css/thumbnail_slider.css" type="text/css" media="screen"/>
+    </head>
+    <body>
+		<div class="header">
+			<h1>Tulio Campos Portifólio</h1> 
+			<!-- <div class="loginButton reference" tal:condition="not: logged"><a class="insideText" href="/login">Login</a></div>
+			<div class="loginButton reference" tal:condition="logged"><a class="insideText" href="/add_files">+ Desenhos</a></div>
+			<div class="loginButton reference" tal:condition="logged"><a class="insideText" href="/logout">Logout</a></div>
+			<div id="pg_scrollWrapper" class="pg_scrollWrapper"> -->
+			<div id="pg_scrollWrapper" class="pg_scrollWrapper">
+				<div id="slider" class="slider"></div>
+			</div>
+			<!-- Logged variable for javascript-->
+			<input tal:condition="logged" id="logged" value="1" type="hidden"/>
+			<input tal:condition="not: logged" id="logged" value="0" type="hidden"/>
+
+			<a tal:condition="not: logged" href="#login-box" class="login-window insideText">Login</a>
+			<a tal:condition="logged" href="#upload-box" class="upload-window insideText">+ Desenhos</a>
+			<a tal:condition="logged" class="insideText" href="/logout">Logout</a>
+			<a  href="#contact-box" class="contact-window insideText">Contato</a>
+<span class="like-button"><iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fmatheus-araujo.com%2Fminhaimagem&amp;send=false&amp;layout=standard&amp;width=450&amp;show_faces=true&amp;font&amp;colorscheme=light&amp;action=like&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:80px;" allowTransparency="true"></iframe></span>
+<!-- 			<a class="reference" href="http://www.matheus-araujo.com" target="_blank">designed by Matheus Araujo</a> -->
+		</div>
+		<!-- =================================================
+				WALL 
+			 =================================================
+		 -->
+		<div class="wall">
+			<div id="pg_container" class="pg_container">
+				<ul id="pg_photos" class="pg_photos"><!-- calculate top-->
+					<li tal:repeat="image listThumbs"><a href="#${repeat.image.number}"><img class="bigDraw" src="${image.url}" alt="${image.url}"/></a></li>
+				</ul>
+				
+
+			</div>
+		</div>
+		<!-- =================================================
+				LOGO
+			 =================================================
+		 -->
+		<div class="marcaDiv">
+			<img class="marca" src="/static/images/marcatransparenteSmall.png"/>
+		</div>
+		<!-- =================================================
+				COMMENT SCREEN
+			 =================================================
+		 -->
+		<div class="caixaComentario">
+			<div id="comentariosTitle">Comentarios: <span id="downArrow"><img id="downArrowImg" src="/static/images/downArrow.png"/><span></div>
+			<table id="commentsTable">
+
+			</table>
+		</div>
+		<!-- =================================================
+				LOGIN SCREEN
+			 =================================================
+		 -->
+		<div id="login-box" class="login-popup">
+	        <a href="#" class="close" style="color:white">X</a>
+	          <form method="post" class="signin" action="#">
+	                <fieldset class="textbox">
+	            	<label class="username">
+	                <span>Login</span>
+	                <input type="text" name="login" value="${login}" id="username" autocomplete="on" placeholder="Username"/>
+	                </label>
+	                <label class="password">
+	                <span>Senha</span>
+	                <input type="password" name="password" value="${password}" placeholder="Password"/>
+	                </label>
+	                <button type="submit" name="login.submitted" value="Log In" class="submit button">Entrar</button>
+	                </fieldset>
+	          </form>
+		</div>
+		<!-- =================================================
+				UPLOAD SCREEN
+			 =================================================
+		 -->
+		 <div id="upload-box" class="upload-popup">
+	        <a href="#" class="close" style="color:white">X</a>
+	          <form action="/store_mp3_view" method="post" accept-charset="utf-8" enctype="multipart/form-data" class="signin" id="uploadForm">
+			    <fieldset class="textbox">
+			    	<br/>
+	            	<label for="imgs">Selecione as images para upload:</label>
+			    	<span id="uploadMask">
+			    		<input id="imgs" name="imgs" type="file" class="hide" accept="image/*" multiple/>
+			    		<!-- Button to invoke the click of the File Input -->
+    					<button type="button" class="submit button uploadButton" style="background: -webkit-gradient(linear, left top, left bottom, from(#f3f3f3), to(rgb(124, 124, 124)))" id="fake" name="fake" onclick="HandleFileButtonClick();" value="Upload File">Clique aqui para fazer upload</button>
+			    	</span>
+			    	<input id="nome" type="hidden" value="figuras" />
+			    	<button type="submit" class="submit button" value="Enviar" onclick="HandleFileSubmitClick();">Enviar</button>
+			    	<img src="/static/images/loading.gif" class="loading hide"/>
+	            </fieldset>
+			</form>
+		</div>
+		<!-- =================================================
+				CONTACT SCREEN
+			 =================================================
+		 -->
+		<div id="contact-box" class="contact-popup">
+	        <a href="#" class="close" style="color:white">X</a>
+	          <form method="post" class="signin" accept-charset="utf-8" action="/send_email">
+	                <fieldset class="textbox">
+	            	<label class="username">
+	                <span>Nome:</span>
+	                <input type="text" name="name" value="" id=""/>
+	                </label>
+	            	<label class="username">
+	                <span>Email:</span>
+	                <input type="text" name="email" value="seu@email.com" id="email">
+	                </label>
+	                <label class="textbox">
+	                <span>Assunto:</span>
+	                <input type="text" name="assunto" value=""/>
+	                </label>
+	                <label class="textbox">
+	                <span>Conteúdo:</span>
+	                <textarea name="content_message" class="textbox" rows="5" cols="60" value="Here's some text."></textarea>
+	                </label>
+	                <button type="submit" name="contact.submitted" value="Log In" class="submit button">Envar</button>
+	                </fieldset>
+	          </form>
+		</div>
+		<!-- =================================================
+				FOOTER
+			 =================================================
+		 -->
+		<div class="footer">
+			<a class="back left" href="http://www.pylonsproject.org/"> <img src="/static/images/pyramid_powered_148x45.png" /></a>
+			<div class="thumbnailSlider" id="thumbnailSlider">
+				<ul class="ts_container">
+					<li tal:repeat="image listImages"><a href="#${repeat.image.number}">${image.name}</a></li>
+					<li class="ts_thumbnails">
+						<div class="ts_preview_wrapper">
+							<ul class="ts_preview">
+								<li tal:repeat="image listSmallThumbs"><img class="bigDraw" src="${image.url}" alt="${image.name}"/></li>
+							</ul>
+						</div>
+						<span></span>
+					</li>
+				</ul>
+			</div>
+			<a class="back right" href="http://www.matheus-araujo.com">development by Matheus Araújo</a>
+			<span class="reference">v0.1</span>
+		    <!-- <a class="reference" href="http://tympanus.net/codrops/" target="_blank">designed By Mary Lou</a> -->
+		</div>
+		<!-- =================================================
+				JAVASCRIPT
+			 =================================================
+		 -->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="static/js/jquery.easing.1.3.js"></script>
+		<script type="text/javascript" src="static/js/jquery.ba-hashchange.min.js"></script>
+		<script type="text/javascript" src="static/js/jquery-mousewheel-3.0.4/jquery.mousewheel.min.js"></script>
+		<script type="text/javascript" src="static/js/documentLoad.js"></script>
+		<script type="text/javascript" src="static/js/personalize.js"></script>
+		<script type="text/javascript" src="static/js/galleryCore.js"></script>
+
+
+			
+			
+			
+
+    </body>
+</html>

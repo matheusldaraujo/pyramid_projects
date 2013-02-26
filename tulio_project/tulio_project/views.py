@@ -343,7 +343,7 @@ def store_script(request):
         output_file.close()
 
     import glob
-    import Image
+    from PIL import Image
     #get thumbs names
     pathThumbs = glob.glob("tulio_project/static/personal_images/thumbs/*")
     thumbs = []
