@@ -137,7 +137,7 @@
 	                <span>Conteúdo:</span>
 	                <textarea name="content_message" class="textbox" rows="5" cols="60" value="Here's some text."></textarea>
 	                </label>
-	                <button type="submit" name="contact.submitted" value="Log In" class="submit button">Envar</button>
+	                <button type="submit" name="contact.submitted" value="Log In" class="submit button">Enviar</button>
 	                </fieldset>
 	          </form>
 		</div>
