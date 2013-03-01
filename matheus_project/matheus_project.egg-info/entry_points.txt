@@ -1,0 +1,5 @@
+      [paste.app_factory]
+      main = matheus_project:main
+      [console_scripts]
+      initialize_matheus_project_db = matheus_project.scripts.initializedb:main
+      
