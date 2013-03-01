@@ -21,6 +21,8 @@ def main(global_config, **settings):
     #Includes
     config.include('pyramid_mailer')
     config.registry['mailer'] = Mailer.from_settings(settings)
-    
+
+    config.include('pyramid_rewrite')
+    config.add_rewrite_rule(r'http://www.matheus-araujo.com', r'/')
     config.scan()
     return config.make_wsgi_app()

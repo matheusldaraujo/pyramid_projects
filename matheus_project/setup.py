@@ -15,6 +15,7 @@ requires = [
     'zope.sqlalchemy',
     'waitress',
     'pyramid_mailer',
+    'pyramid_rewrite',
     ]
 
 setup(name='matheus_project',
