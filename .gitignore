@@ -1,5 +1,6 @@
 pyramid.sublime-workspace
 matheus_project/development.ini
+matheus_project/production.ini
 python_enviroment/
 tulio_project/tulio_project/static/personal_images/
 tulio_project/tulio_project/*.pyc
