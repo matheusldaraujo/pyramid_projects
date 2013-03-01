@@ -36,7 +36,7 @@ def send_email(request):
 
     message = Message(subject="Contato Pelo Site",
                   sender="tuliodesenhista@gmail.com",
-                  recipients=["matheus.ld.araujo@gmail.com"],
+                  recipients=["tuliodesenhista@gmail.com"],
                   body="Nome: %s\nEmail: %s \nAssunto: %s \nConteudo: %s \n" % (name,email,assunto,content))
     try:
         mailer.send_immediately(message, fail_silently=False)
