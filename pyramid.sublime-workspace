@@ -4,6 +4,54 @@
 		"selected_items":
 		[
 			[
+				"font",
+				"font-size"
+			],
+			[
+				"marg",
+				"margin-top"
+			],
+			[
+				"max-",
+				"max-height"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"ma",
+				"margin"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"border",
+				"border-top"
+			],
+			[
+				"border-r",
+				"border-right"
+			],
+			[
+				"border-s",
+				"border-style"
+			],
+			[
+				"pa",
+				"padding"
+			],
+			[
+				"bor",
+				"border"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
 				"test",
 				"testHandler"
 			],
@@ -24,16 +72,8 @@
 				"pathThumb"
 			],
 			[
-				"border",
-				"border"
-			],
-			[
 				"comm",
 				"commentImg"
-			],
-			[
-				"bor",
-				"border-radius"
 			],
 			[
 				"fo",
@@ -52,20 +92,12 @@
 				"simpleComments"
 			],
 			[
-				"font",
-				"font-size"
-			],
-			[
 				"exc",
 				"except"
 			],
 			[
 				"ba",
 				"background-color"
-			],
-			[
-				"max",
-				"max-height"
 			],
 			[
 				"mart",
@@ -116,20 +148,12 @@
 				"thumbs"
 			],
 			[
-				"ma",
-				"max-height"
-			],
-			[
 				"mar",
 				"margin-left"
 			],
 			[
 				"al",
 				"vertical-align"
-			],
-			[
-				"pa",
-				"padding-left"
 			],
 			[
 				"log",
@@ -274,14 +298,6 @@
 			[
 				"row",
 				"row_id"
-			],
-			[
-				"marg",
-				"margin-bottom"
-			],
-			[
-				"back",
-				"background-color"
 			],
 			[
 				"result",
@@ -431,13 +447,49 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "matheus_project/matheus_project/views.py",
+			"settings":
+			{
+				"buffer_size": 1245,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "matheus_project/matheus_project/__init__.py",
+			"settings":
+			{
+				"buffer_size": 565,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "matheus_project/matheus_project/templates/home.pt",
+			"settings":
+			{
+				"buffer_size": 1729,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "matheus_project/matheus_project/static/mat.css",
+			"settings":
+			{
+				"buffer_size": 1782,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 72.0,
 		"selected_items":
 		[
+			[
+				"listpa",
+				"Package Control: List Packages"
+			],
 			[
 				"pack",
 				"Package Control: Install Package"
@@ -483,7 +535,7 @@
 				"Set Syntax: INI"
 			]
 		],
-		"width": 476.0
+		"width": 593.0
 	},
 	"console":
 	{
@@ -500,13 +552,17 @@
 	},
 	"file_history":
 	[
+		"/home/matheus/pyramid_instances/matheus_project/matheus_project/templates/mytemplate.pt",
+		"/home/matheus/pyramid_instances/matheus_project/matheus_project/static/mat.css",
+		"/home/matheus/.config/sublime-text-2/Packages/BracketHighlighter/BracketHighlighter.sublime-settings",
+		"/home/matheus/plone_instances/communi/1/.gitignore",
+		"/home/matheus/pyramid_instances/.gitignore",
 		"/home/matheus/google_appengine/helloworld/app.yaml",
 		"/home/matheus/google_appengine/unit2WebDevelopment/1.html",
 		"/home/matheus/google_appengine/helloworld/hw.py",
 		"/home/matheus/Downloads/gcc-4.4.7/gcc/config/i386/linux-unwind.h",
 		"/home/matheus/cuda_works/hw.cu",
 		"/home/matheus/cuda_works/bin/hw.cu",
-		"/home/matheus/pyramid_instances/.gitignore",
 		"/home/matheus/pyramid_instances/tulio_project/development.ini",
 		"/home/matheus/pyramid_instances/tulio_project/tulio_project/views.py",
 		"/home/matheus/pyramid_instances/tulio_project/setup.py",
@@ -612,7 +668,6 @@
 		"/home/matheus/plone_instances/communi/1/versions.cfg",
 		"/home/matheus/Dropbox/Linux/fedora",
 		"/home/matheus/plone_instances/communi/1/src/wres.tour/setup.py",
-		"/home/matheus/plone_instances/communi/1/.gitignore",
 		"/home/matheus/Dropbox/Linux/newOS.sh",
 		"/home/matheus/plone_instances/communi/1/src/wres.theme/wres/theme/skins/wres_theme_templates/agenda_navigation_portlet.pt",
 		"/home/matheus/plone_instances/cristiano/1/.gitignore",
@@ -624,10 +679,7 @@
 		"/home/matheus/plone_instances/communi/1/src/wres.theme/wres/theme/skins/wres_theme_styles/doc_view.css",
 		"/home/matheus/Dropbox/Matheus-Pessoal/Documentos e Contratos/Passaporte",
 		"/home/matheus/plone_instances/communi/1/src/wres.theme/wres/theme/skins/wres_theme_scripts/getPatientAge.py",
-		"/home/matheus/plone_instances/communi/1/src/wres.theme/wres/theme/skins/wres_theme_js/print_prescription.js",
-		"/home/matheus/plone_instances/communi/1/src/wres.theme/wres/theme/skins/wres_theme_templates/patient_view.pt",
-		"/home/matheus/plone_instances/communi/1/src/wres.theme/wres/theme/skins/wres_theme_templates/documents_view.pt",
-		"/home/matheus/plone_instances/communi/1/src/wres.theme/wres/theme/skins/wres_theme_styles/patient_view.css"
+		"/home/matheus/plone_instances/communi/1/src/wres.theme/wres/theme/skins/wres_theme_js/print_prescription.js"
 	],
 	"find":
 	{
@@ -811,8 +863,472 @@
 	"groups":
 	[
 		{
+			"selected": 2,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "matheus_project/matheus_project/views.py",
+					"settings":
+					{
+						"buffer_size": 1245,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								648,
+								648
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": false,
+							"sublimelinter_mark_style": "outline",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "matheus_project/matheus_project/__init__.py",
+					"settings":
+					{
+						"buffer_size": 565,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								135,
+								135
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": false,
+							"sublimelinter_mark_style": "outline",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "matheus_project/matheus_project/templates/home.pt",
+					"settings":
+					{
+						"buffer_size": 1729,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								713,
+								713
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"is_xml": false,
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": false,
+							"sublimelinter_mark_style": "outline",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 352.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "matheus_project/matheus_project/static/mat.css",
+					"settings":
+					{
+						"buffer_size": 1782,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1777,
+								1777
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": false,
+							"sublimelinter_mark_style": "outline",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1518.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -861,6 +1377,10 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"mat.c",
+				"matheus_project/matheus_project/static/mat.css"
+			],
 			[
 				"de",
 				"tulio_project/development.ini"
@@ -1368,10 +1888,6 @@
 			[
 				"generic_ri",
 				"theme/skins/wres_theme_js/generic_richtext_edit.js"
-			],
-			[
-				"patient_char",
-				"theme/skins/wres_theme_templates/patient_cphone_edit_macro.pt"
 			]
 		],
 		"width": 0.0

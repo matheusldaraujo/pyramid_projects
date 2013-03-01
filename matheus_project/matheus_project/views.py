@@ -19,7 +19,10 @@ from .models import (
 
 @view_config(route_name='home', renderer='templates/home.pt')
 def home_view(request):
-    return {'project': 'matheus_project'}
+    import urllib2
+    page = urllib2.urlopen("http://www.example.com").read()
+    # import ipdb;ipdb.set_trace()
+    return {'project': 'matheus_project','page':page}
 
 conn_err_msg = """\
 Pyramid is having a problem using your SQL database.  The problem
