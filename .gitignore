@@ -9,4 +9,5 @@ tulio_project/tulio_project/*.pyc
 *.PKG-INFO
 *.PKG-INFO
 *.SOURCES.txt
+*.pyc
 

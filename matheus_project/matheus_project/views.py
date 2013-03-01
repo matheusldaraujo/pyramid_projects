@@ -36,8 +36,8 @@ def sendEmail_view(request):
                   recipients=["matheus.ld.araujo@gmail.com"],
                   body="Nome: %s\nEmail: %s \nAssunto: %s \nConteudo: %s \n" % (name,email,assunto,content))
     try:
-        # mailer.send_immediately(message, fail_silently=False)
-        import time;time.sleep(1)
+        mailer.send_immediately(message, fail_silently=False)
+        # import time;time.sleep(1)
     except:
         return {'message': 'Desculpe houve um problema, tente me contactar pelo email.<br/>Sorry a problem happened, try to contact me by email'}
     return {'message': 'Email enviado.</br>Email sent.'}
