@@ -2,6 +2,8 @@ from pyramid.response import Response
 from pyramid.view import view_config
 
 from sqlalchemy.exc import DBAPIError
+from pyramid_mailer import get_mailer
+from pyramid_mailer.message import Message
 
 from .models import (
     DBSession,
@@ -19,10 +21,26 @@ from .models import (
 
 @view_config(route_name='home', renderer='templates/home.pt')
 def home_view(request):
-    import urllib2
-    page = urllib2.urlopen("http://www.example.com").read()
-    # import ipdb;ipdb.set_trace()
-    return {'project': 'matheus_project','page':page}
+    return {'project': 'matheus_project'}
+
+@view_config(name='sendEmail', renderer='json')
+def sendEmail_view(request):
+    mailer = request.registry['mailer']
+    name = request.GET["name"]
+    email = request.GET["email"]
+    assunto = request.GET["subject"]
+    content = request.GET["content"]
+
+    message = Message(subject="Contato Pelo Site",
+                  sender="0matheus.araujo0@gmail.com",
+                  recipients=["matheus.ld.araujo@gmail.com"],
+                  body="Nome: %s\nEmail: %s \nAssunto: %s \nConteudo: %s \n" % (name,email,assunto,content))
+    try:
+        # mailer.send_immediately(message, fail_silently=False)
+        import time;time.sleep(1)
+    except:
+        return {'message': 'Desculpe houve um problema, tente me contactar pelo email.<br/>Sorry a problem happened, try to contact me by email'}
+    return {'message': 'Email enviado.</br>Email sent.'}
 
 conn_err_msg = """\
 Pyramid is having a problem using your SQL database.  The problem

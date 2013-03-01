@@ -8,6 +8,27 @@
   <script type="text/javascript" src="/static/jquery-1.7.2.min.js"></script>
    <link rel="stylesheet" href="/static/mat.css" media="screen" />
 </head>
+<script>
+  function sendEmail(){
+    name=$("input[name='name']").val()
+    subject=$("input[name='subject']").val()
+    email=$("input[name='email']").val()
+    content=$("textarea[name='content']").val()
+
+     var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\"+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+     if (!re.test(email)){
+      alert("Email inválido. Invalid email.")
+      return;
+     }
+
+    $(".loading").fadeIn();
+    $.get("/sendEmail",{'name':name,'subject':subject,'email':email,'content':content},function(data){
+      $(".loading").fadeOut();
+      tag = $("<div><center>"+data.message+"</center></div>")
+      $(".divForm").html(tag)
+    })
+  }
+</script>
 <body>
   <div class="divFrame">
     <iframe  height="100%" width="100%" frameborder="0" src="http://www.matheus-araujo.com">
@@ -17,19 +38,21 @@
   <div class="backFont leftTab">
     <div>
       <div class="fastContact">
-        Contato Rápido:
+        Contate-me:
       </div>
       <div class="divForm">
-        <form>
+        <form method="post" action="#">
           <center>
-            <label>Assunto:</label><br/>
-            <input class="borderradius5" type="text"/><br/>
+            <label>Nome (name):</label><br/>
+            <input class="borderradius5" name="name" type="text"/><br/>
+            <label>Assunto (subject):</label><br/>
+            <input class="borderradius5" name="subject" type="text"/><br/>
             <label>Email:</label><br/>
-            <input class="borderradius5" type="text"/><br/>
-            <label>Conteúdo:</label><br/>
-            <textarea class="borderradius5" rols="5">
-            </textarea>
-            <input type="button" class="borderradius5" value="Enviar" />
+            <input class="borderradius5" name="email" type="email"  autocomplete="off"/><br/>
+            <label>Conteúdo (content):</label><br/>
+            <textarea class="borderradius5" name="content" rols="5"></textarea>
+            <input type="button" id="button" name="email.submitted" onclick="sendEmail()" class="borderradius5" value="Enviar" />
+            <img class="loading" src="/static/loading.gif"/>
           </center>
         </form>
       </div>
@@ -39,7 +62,7 @@
         </a>
       </div>
       <div>
-        <span class="bold emailLabel">Email:</span><span class="email"> matheus.ld.araujo@gmail.com</span>
+        <span class="bold emailLabel">Email:</span><div class="email">0matheus.araujo0@gmail.com</div>
       </div>
     </div>
   </div>

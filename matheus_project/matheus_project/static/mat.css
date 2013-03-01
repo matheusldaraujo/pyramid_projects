@@ -106,3 +106,8 @@ iframe{
 iframe::-webkit-scrollbar { 
     display: none; 
 }
+.loading{
+	max-height: 5%;
+	vertical-align: middle;
+	display:none;
+}
