@@ -25,6 +25,7 @@ matheus_project/static/headerbg.png
 matheus_project/static/ie6.css
 matheus_project/static/jquery-1.7.2.min.js
 matheus_project/static/jquery-1.9.1.min.js
+matheus_project/static/loading.gif
 matheus_project/static/mat.css
 matheus_project/static/middlebg.png
 matheus_project/static/pylons.css
