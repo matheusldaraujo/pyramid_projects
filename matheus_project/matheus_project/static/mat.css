@@ -99,11 +99,11 @@ iframe{
 	left: 0px;
 }
 .divFrame{
-	height: 95%;
-	width: 100%;
-	left: 0px;
+	height:105%;
+	width: 105%;
+	margin-left: -8px;
 }
-iframe::-webkit-scrollbar { 
+::-webkit-scrollbar { 
     display: none; 
 }
 .loading{
