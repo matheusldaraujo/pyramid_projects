@@ -4,10 +4,12 @@ from pyramid.view import view_config
 from sqlalchemy.exc import DBAPIError
 from pyramid_mailer import get_mailer
 from pyramid_mailer.message import Message
+from datetime import datetime
 
 from .models import (
     DBSession,
     MyModel,
+    HitModel,
     )
 
 
@@ -19,9 +21,35 @@ from .models import (
 #         return Response(conn_err_msg, content_type='text/plain', status_int=500)
 #     return {'one': one, 'project': 'matheus_project'}
 
+@view_config(name='hits', renderer='templates/hits.pt')
+def hit_view(request):
+    try:
+        hits = DBSession.query(HitModel).order_by("id desc").all()
+    except:
+        print "Ha um problema em buscar os dados no banco de dados."
+    toReturn = []
+    for hit in hits:
+        h = {}
+        h['id'] = hit.id
+        h['ip'] = hit.ip
+        h['date'] = hit.date
+        h['userAgent'] = hit.userAgent
+        toReturn.append(h)
+    count = len(toReturn)
+    
+    return {'count':count,'hits':toReturn}
+
 @view_config(route_name='home', renderer='templates/home.pt')
 def home_view(request):
-    return {'project': 'matheus_project'}
+    userAgent = request.user_agent
+    ip = request.remote_addr
+    date = datetime.now()
+    hit = HitModel(ip,date,userAgent)
+    try:
+        DBSession.add(hit)
+    except:
+        print "Houve um problema em gravar no banco de dados."
+    return {}
 
 @view_config(name='sendEmail', renderer='json')
 def sendEmail_view(request):

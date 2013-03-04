@@ -3,6 +3,7 @@ import sys
 import transaction
 
 from sqlalchemy import engine_from_config
+from datetime import datetime
 
 from pyramid.paster import (
     get_appsettings,
@@ -12,6 +13,7 @@ from pyramid.paster import (
 from ..models import (
     DBSession,
     MyModel,
+    HitModel,
     Base,
     )
 

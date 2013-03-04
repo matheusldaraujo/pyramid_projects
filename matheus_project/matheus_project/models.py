@@ -2,6 +2,7 @@ from sqlalchemy import (
     Column,
     Integer,
     Text,
+    DateTime,
     )
 
 from sqlalchemy.ext.declarative import declarative_base
@@ -26,3 +27,15 @@ class MyModel(Base):
     def __init__(self, name, value):
         self.name = name
         self.value = value
+
+class HitModel(Base):
+    __tablename__ = "hit"
+    id = Column(Integer,primary_key=True)
+    ip = Column(Text,nullable=False)
+    date = Column(DateTime,nullable=False)
+    userAgent = Column(Text,nullable=True)
+
+    def __init__(self, ip, date, userAgent):
+        self.ip = ip
+        self.date = date
+        self.userAgent = userAgent

@@ -111,3 +111,9 @@ iframe{
 	vertical-align: middle;
 	display:none;
 }
+#tableHit{
+	/*border:1px solid black;*/
+}
+#tableHit th,td{
+	border:1px solid black;	
+}
