@@ -39,3 +39,15 @@ class HitModel(Base):
         self.ip = ip
         self.date = date
         self.userAgent = userAgent
+
+class IPModel(Base):
+    __tablename__ = "ip"
+    id = Column(Integer,primary_key=True)
+    date = Column(DateTime,nullable=False)
+    name = Column(Text,nullable=False)
+    ip = Column(Text,nullable=False)
+
+    def __init__(self, date, name, ip):
+        self.ip = ip
+        self.date = date
+        self.name = name

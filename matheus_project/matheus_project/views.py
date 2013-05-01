@@ -10,7 +10,13 @@ from .models import (
     DBSession,
     MyModel,
     HitModel,
+    IPModel,
     )
+from pyramid.httpexceptions import HTTPFound
+
+from commands import getoutput
+
+import urllib2
 
 
 # @view_config(route_name='home', renderer='templates/mytemplate.pt')
@@ -20,6 +26,40 @@ from .models import (
 #     except DBAPIError:
 #         return Response(conn_err_msg, content_type='text/plain', status_int=500)
 #     return {'one': one, 'project': 'matheus_project'}
+
+@view_config(name='ip_save')
+def ip_save(request):
+    ip = getoutput("curl ifconfig.me").split("\n")[-1]
+    date = datetime.now()
+    name = request.GET["name"]
+    ip = IPModel(date,name,ip)
+    try:
+        DBSession.add(ip)
+    except:
+        print "Houve um problema em gravar no banco de dados."
+    
+    return HTTPFound(location = "/")
+
+@view_config(name='ip_view', renderer='templates/ip_view.pt')
+def ip_view(request):
+    try:
+        ips = DBSession.query(IPModel).order_by("id desc").all()
+    except:
+        print "Ha um problema em buscar os dados no banco de dados."
+    
+    toReturn = []
+
+    for ip in ips:
+        i = {}
+        i['id'] = ip.id
+        i['ip'] = ip.ip
+        i['date'] = ip.date
+        i['name'] = ip.name
+        toReturn.append(i)
+    
+    count = len(toReturn)
+
+    return  {'count':count,'ips':toReturn}
 
 @view_config(name='hits', renderer='templates/hits.pt')
 def hit_view(request):

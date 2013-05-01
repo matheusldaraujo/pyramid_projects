@@ -11,4 +11,9 @@ tulio_project/tulio_project/*.pyc
 *.PKG-INFO
 *.SOURCES.txt
 *.pyc
-
+tpv_project/
+matheus_project/matheus_project.egg-info/SOURCES.txt
+matheus_project/matheus_project/models.pyc
+matheus_project/matheus_project/scripts/__init__.pyc
+matheus_project/matheus_project/scripts/initializedb.pyc
+matheus_project/matheus_project/tests.pyc

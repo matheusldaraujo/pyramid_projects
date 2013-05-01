@@ -14,6 +14,7 @@ from ..models import (
     DBSession,
     MyModel,
     HitModel,
+    IPModel,
     Base,
     )
 
