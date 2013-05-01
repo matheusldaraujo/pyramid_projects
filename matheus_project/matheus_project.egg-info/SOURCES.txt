@@ -1,8 +1,6 @@
 CHANGES.txt
 MANIFEST.in
 README.txt
-development.ini
-production.ini
 setup.cfg
 setup.py
 matheus_project/__init__.py
@@ -32,5 +30,6 @@ matheus_project/static/pylons.css
 matheus_project/static/pyramid-small.png
 matheus_project/static/pyramid.png
 matheus_project/static/transparent.gif
+matheus_project/templates/hits.pt
 matheus_project/templates/home.pt
 matheus_project/templates/mytemplate.pt
