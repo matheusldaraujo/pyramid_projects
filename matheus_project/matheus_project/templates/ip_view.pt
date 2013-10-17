@@ -8,19 +8,22 @@
   <link rel="stylesheet" href="/static/mat.css" media="screen" />
 </head>
 <body>
-  <h1>Total: ${count}</h1>
+  <h1>My Digital Ocean IP : ${ipDO}</h1>
+  <h2>Total: ${count}</h2>
  <table id="tableHit">
    <tr>
      <th>id</th>
      <th>ip</th>
      <th>name</th>
      <th>date</th>
+     <th>port</th>
    </tr>
   <tr tal:repeat="ip ips">
     <td>${ip.id}</td>
     <td>${ip.ip}</td>
     <td>${ip.name}</td>
     <td>${ip.date}</td>
+    <td>${ip.port}</td>
   </tr>
  </table>
 </body>

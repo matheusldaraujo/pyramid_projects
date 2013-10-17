@@ -46,8 +46,10 @@ class IPModel(Base):
     date = Column(DateTime,nullable=False)
     name = Column(Text,nullable=False)
     ip = Column(Text,nullable=False)
+    port = Column(Text,nullable=False)
 
-    def __init__(self, date, name, ip):
+    def __init__(self, date, name, ip,port):
         self.ip = ip
         self.date = date
         self.name = name
+        self.port = port

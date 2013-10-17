@@ -18,7 +18,10 @@ from commands import getoutput
 
 import urllib2
 
-
+try:
+    ipDO = getoutput("curl ifconfig.me").split("\n")[-1]
+except:
+    ipDO = "Houve algum problema em pegar o ip"
 # @view_config(route_name='home', renderer='templates/mytemplate.pt')
 # def my_view(request):
 #     try:
@@ -29,15 +32,16 @@ import urllib2
 
 @view_config(name='ip_save')
 def ip_save(request):
-    ip = getoutput("curl ifconfig.me").split("\n")[-1]
+    ip = request.GET["ip"]
     date = datetime.now()
     name = request.GET["name"]
-    ip = IPModel(date,name,ip)
+    port = request.GET["port"]
+    ip = IPModel(date,name,ip,port)
     try:
         DBSession.add(ip)
     except:
         print "Houve um problema em gravar no banco de dados."
-    
+
     return HTTPFound(location = "/")
 
 @view_config(name='ip_view', renderer='templates/ip_view.pt')
@@ -46,7 +50,7 @@ def ip_view(request):
         ips = DBSession.query(IPModel).order_by("id desc").all()
     except:
         print "Ha um problema em buscar os dados no banco de dados."
-    
+
     toReturn = []
 
     for ip in ips:
@@ -55,11 +59,12 @@ def ip_view(request):
         i['ip'] = ip.ip
         i['date'] = ip.date
         i['name'] = ip.name
+        i["port"] = ip.port
         toReturn.append(i)
-    
+
     count = len(toReturn)
 
-    return  {'count':count,'ips':toReturn}
+    return  {'count':count,'ips':toReturn,"ipDO":ipDO}
 
 @view_config(name='hits', renderer='templates/hits.pt')
 def hit_view(request):
@@ -76,7 +81,7 @@ def hit_view(request):
         h['userAgent'] = hit.userAgent
         toReturn.append(h)
     count = len(toReturn)
-    
+
     return {'count':count,'hits':toReturn}
 
 @view_config(route_name='home', renderer='templates/home.pt')
@@ -115,7 +120,7 @@ Pyramid is having a problem using your SQL database.  The problem
 might be caused by one of the following things:
 
 1.  You may need to run the "initialize_matheus_project_db" script
-    to initialize your database tables.  Check your virtual 
+    to initialize your database tables.  Check your virtual
     environment's "bin" directory for this script and try to run it.
 
 2.  Your database server may not be running.  Check that the
