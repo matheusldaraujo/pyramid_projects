@@ -16,6 +16,7 @@ requires = [
     'waitress',
     'pyramid_mailer',
     'pyramid_rewrite',
+    'pyramid_chameleon',
     ]
 
 setup(name='matheus_project',

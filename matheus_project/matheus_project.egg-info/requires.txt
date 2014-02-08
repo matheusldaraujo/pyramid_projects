@@ -7,3 +7,4 @@ zope.sqlalchemy
 waitress
 pyramid_mailer
 pyramid_rewrite
+pyramid_chameleon

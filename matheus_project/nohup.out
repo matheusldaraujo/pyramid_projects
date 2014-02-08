@@ -1,0 +1,426 @@
+2013-10-17 17:48:06,432 ERROR [waitress][Dummy-1] Exception when serving /sendEmail
+Traceback (most recent call last):
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/waitress-0.8.7-py2.7.egg/waitress/channel.py", line 332, in service
+    task.service()
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/waitress-0.8.7-py2.7.egg/waitress/task.py", line 173, in service
+    self.execute()
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/waitress-0.8.7-py2.7.egg/waitress/task.py", line 388, in execute
+    app_iter = self.channel.server.application(env, start_response)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/router.py", line 272, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/router.py", line 247, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid_tm-0.7-py2.7.egg/pyramid_tm/__init__.py", line 82, in tm_tween
+    reraise(*exc_info)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid_tm-0.7-py2.7.egg/pyramid_tm/__init__.py", line 63, in tm_tween
+    response = handler(request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/config/views.py", line 348, in rendered_view
+    result = view(context, request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/config/views.py", line 494, in _requestonly_view
+    response = view(request)
+  File "/home/matheus/.ssh/pyramid_projects/matheus_project/matheus_project/views.py", line 102, in sendEmail_view
+    name = request.GET["name"]
+  File "build/bdist.linux-x86_64/egg/webob/multidict.py", line 99, in __getitem__
+    raise KeyError(key)
+KeyError: 'name'
+send: 'ehlo [127.0.0.1]\r\n'
+reply: '250-mx.google.com at your service, [162.243.63.107]\r\n'
+reply: '250-SIZE 35882577\r\n'
+reply: '250-8BITMIME\r\n'
+reply: '250-STARTTLS\r\n'
+reply: '250-ENHANCEDSTATUSCODES\r\n'
+reply: '250 CHUNKING\r\n'
+reply: retcode (250); Msg: mx.google.com at your service, [162.243.63.107]
+SIZE 35882577
+8BITMIME
+STARTTLS
+ENHANCEDSTATUSCODES
+CHUNKING
+send: 'STARTTLS\r\n'
+reply: '220 2.0.0 Ready to start TLS\r\n'
+reply: retcode (220); Msg: 2.0.0 Ready to start TLS
+send: 'ehlo [127.0.0.1]\r\n'
+reply: '250-mx.google.com at your service, [162.243.63.107]\r\n'
+reply: '250-SIZE 35882577\r\n'
+reply: '250-8BITMIME\r\n'
+reply: '250-AUTH LOGIN PLAIN XOAUTH XOAUTH2 PLAIN-CLIENTTOKEN\r\n'
+reply: '250-ENHANCEDSTATUSCODES\r\n'
+reply: '250 CHUNKING\r\n'
+reply: retcode (250); Msg: mx.google.com at your service, [162.243.63.107]
+SIZE 35882577
+8BITMIME
+AUTH LOGIN PLAIN XOAUTH XOAUTH2 PLAIN-CLIENTTOKEN
+ENHANCEDSTATUSCODES
+CHUNKING
+send: 'AUTH PLAIN ADBtYXRoZXVzLmFyYXVqbzAAMHBpbmtGTE9ZRDA=\r\n'
+reply: '235 2.7.0 Accepted\r\n'
+reply: retcode (235); Msg: 2.7.0 Accepted
+send: 'mail FROM:<0matheus.araujo0@gmail.com> size=335\r\n'
+reply: '250 2.1.0 OK zq10sm116187206pab.6 - gsmtp\r\n'
+reply: retcode (250); Msg: 2.1.0 OK zq10sm116187206pab.6 - gsmtp
+send: 'rcpt TO:<matheus.ld.araujo@gmail.com>\r\n'
+reply: '250 2.1.5 OK zq10sm116187206pab.6 - gsmtp\r\n'
+reply: retcode (250); Msg: 2.1.5 OK zq10sm116187206pab.6 - gsmtp
+send: 'data\r\n'
+reply: '354  Go ahead zq10sm116187206pab.6 - gsmtp\r\n'
+reply: retcode (354); Msg: Go ahead zq10sm116187206pab.6 - gsmtp
+data: (354, 'Go ahead zq10sm116187206pab.6 - gsmtp')
+send: 'Content-Type: text/plain; charset="us-ascii"\r\nMIME-Version: 1.0\r\nContent-Transfer-Encoding: quoted-printable\r\nFrom: 0matheus.araujo0@gmail.com\r\nSubject: Contato Pelo Site\r\nTo: matheus.ld.araujo@gmail.com\r\nContent-Disposition: inline\r\n\r\nNome:=20Matheus\r\nEmail:=20matheus.ld.araujo@gmail.com=20\r\nAssunto:=20Assunto=20\r\nConteudo:=20testestestera=20\r\n.\r\n'
+reply: '250 2.0.0 OK 1382033563 zq10sm116187206pab.6 - gsmtp\r\n'
+reply: retcode (250); Msg: 2.0.0 OK 1382033563 zq10sm116187206pab.6 - gsmtp
+data: (250, '2.0.0 OK 1382033563 zq10sm116187206pab.6 - gsmtp')
+send: 'quit\r\n'
+reply: '221 2.0.0 closing connection zq10sm116187206pab.6 - gsmtp\r\n'
+reply: retcode (221); Msg: 2.0.0 closing connection zq10sm116187206pab.6 - gsmtp
+2013-10-17 23:18:49,107 ERROR [waitress][Dummy-2] Exception when serving /sendEmail
+Traceback (most recent call last):
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/waitress-0.8.7-py2.7.egg/waitress/channel.py", line 332, in service
+    task.service()
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/waitress-0.8.7-py2.7.egg/waitress/task.py", line 173, in service
+    self.execute()
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/waitress-0.8.7-py2.7.egg/waitress/task.py", line 388, in execute
+    app_iter = self.channel.server.application(env, start_response)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/router.py", line 272, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/router.py", line 247, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid_tm-0.7-py2.7.egg/pyramid_tm/__init__.py", line 82, in tm_tween
+    reraise(*exc_info)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid_tm-0.7-py2.7.egg/pyramid_tm/__init__.py", line 63, in tm_tween
+    response = handler(request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/config/views.py", line 348, in rendered_view
+    result = view(context, request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/config/views.py", line 494, in _requestonly_view
+    response = view(request)
+  File "/home/matheus/.ssh/pyramid_projects/matheus_project/matheus_project/views.py", line 102, in sendEmail_view
+    name = request.GET["name"]
+  File "build/bdist.linux-x86_64/egg/webob/multidict.py", line 99, in __getitem__
+    raise KeyError(key)
+KeyError: 'name'
+2013-10-18 11:15:41,342 ERROR [waitress][Dummy-1] Exception when serving /sendEmail
+Traceback (most recent call last):
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/waitress-0.8.7-py2.7.egg/waitress/channel.py", line 332, in service
+    task.service()
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/waitress-0.8.7-py2.7.egg/waitress/task.py", line 173, in service
+    self.execute()
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/waitress-0.8.7-py2.7.egg/waitress/task.py", line 388, in execute
+    app_iter = self.channel.server.application(env, start_response)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/router.py", line 272, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/router.py", line 247, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid_tm-0.7-py2.7.egg/pyramid_tm/__init__.py", line 82, in tm_tween
+    reraise(*exc_info)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid_tm-0.7-py2.7.egg/pyramid_tm/__init__.py", line 63, in tm_tween
+    response = handler(request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/config/views.py", line 348, in rendered_view
+    result = view(context, request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/config/views.py", line 494, in _requestonly_view
+    response = view(request)
+  File "/home/matheus/pyramid_projects/matheus_project/matheus_project/views.py", line 102, in sendEmail_view
+    name = request.GET["name"]
+  File "build/bdist.linux-x86_64/egg/webob/multidict.py", line 99, in __getitem__
+    raise KeyError(key)
+KeyError: 'name'
+2013-10-18 17:48:57,984 ERROR [waitress][Dummy-2] Exception when serving /sendEmail
+Traceback (most recent call last):
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/waitress-0.8.7-py2.7.egg/waitress/channel.py", line 332, in service
+    task.service()
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/waitress-0.8.7-py2.7.egg/waitress/task.py", line 173, in service
+    self.execute()
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/waitress-0.8.7-py2.7.egg/waitress/task.py", line 388, in execute
+    app_iter = self.channel.server.application(env, start_response)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/router.py", line 272, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/router.py", line 247, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid_tm-0.7-py2.7.egg/pyramid_tm/__init__.py", line 82, in tm_tween
+    reraise(*exc_info)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid_tm-0.7-py2.7.egg/pyramid_tm/__init__.py", line 63, in tm_tween
+    response = handler(request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/config/views.py", line 348, in rendered_view
+    result = view(context, request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/config/views.py", line 494, in _requestonly_view
+    response = view(request)
+  File "/home/matheus/pyramid_projects/matheus_project/matheus_project/views.py", line 102, in sendEmail_view
+    name = request.GET["name"]
+  File "build/bdist.linux-x86_64/egg/webob/multidict.py", line 99, in __getitem__
+    raise KeyError(key)
+KeyError: 'name'
+2013-10-19 05:02:02,741 ERROR [waitress][Dummy-3] Exception when serving /sendEmail
+Traceback (most recent call last):
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/waitress-0.8.7-py2.7.egg/waitress/channel.py", line 332, in service
+    task.service()
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/waitress-0.8.7-py2.7.egg/waitress/task.py", line 173, in service
+    self.execute()
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/waitress-0.8.7-py2.7.egg/waitress/task.py", line 388, in execute
+    app_iter = self.channel.server.application(env, start_response)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/router.py", line 272, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/router.py", line 247, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid_tm-0.7-py2.7.egg/pyramid_tm/__init__.py", line 82, in tm_tween
+    reraise(*exc_info)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid_tm-0.7-py2.7.egg/pyramid_tm/__init__.py", line 63, in tm_tween
+    response = handler(request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/config/views.py", line 348, in rendered_view
+    result = view(context, request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/config/views.py", line 494, in _requestonly_view
+    response = view(request)
+  File "/home/matheus/pyramid_projects/matheus_project/matheus_project/views.py", line 102, in sendEmail_view
+    name = request.GET["name"]
+  File "build/bdist.linux-x86_64/egg/webob/multidict.py", line 99, in __getitem__
+    raise KeyError(key)
+KeyError: 'name'
+2013-10-19 12:57:56,088 ERROR [waitress][Dummy-4] Exception when serving /sendEmail
+Traceback (most recent call last):
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/waitress-0.8.7-py2.7.egg/waitress/channel.py", line 332, in service
+    task.service()
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/waitress-0.8.7-py2.7.egg/waitress/task.py", line 173, in service
+    self.execute()
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/waitress-0.8.7-py2.7.egg/waitress/task.py", line 388, in execute
+    app_iter = self.channel.server.application(env, start_response)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/router.py", line 272, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/router.py", line 247, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid_tm-0.7-py2.7.egg/pyramid_tm/__init__.py", line 82, in tm_tween
+    reraise(*exc_info)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid_tm-0.7-py2.7.egg/pyramid_tm/__init__.py", line 63, in tm_tween
+    response = handler(request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/config/views.py", line 348, in rendered_view
+    result = view(context, request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/config/views.py", line 494, in _requestonly_view
+    response = view(request)
+  File "/home/matheus/pyramid_projects/matheus_project/matheus_project/views.py", line 102, in sendEmail_view
+    name = request.GET["name"]
+  File "build/bdist.linux-x86_64/egg/webob/multidict.py", line 99, in __getitem__
+    raise KeyError(key)
+KeyError: 'name'
+2013-10-19 19:00:26,716 ERROR [waitress][Dummy-2] Exception when serving /sendEmail
+Traceback (most recent call last):
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/waitress-0.8.7-py2.7.egg/waitress/channel.py", line 332, in service
+    task.service()
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/waitress-0.8.7-py2.7.egg/waitress/task.py", line 173, in service
+    self.execute()
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/waitress-0.8.7-py2.7.egg/waitress/task.py", line 388, in execute
+    app_iter = self.channel.server.application(env, start_response)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/router.py", line 272, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/router.py", line 247, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid_tm-0.7-py2.7.egg/pyramid_tm/__init__.py", line 82, in tm_tween
+    reraise(*exc_info)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid_tm-0.7-py2.7.egg/pyramid_tm/__init__.py", line 63, in tm_tween
+    response = handler(request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/config/views.py", line 348, in rendered_view
+    result = view(context, request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/config/views.py", line 494, in _requestonly_view
+    response = view(request)
+  File "/home/matheus/pyramid_projects/matheus_project/matheus_project/views.py", line 102, in sendEmail_view
+    name = request.GET["name"]
+  File "build/bdist.linux-x86_64/egg/webob/multidict.py", line 99, in __getitem__
+    raise KeyError(key)
+KeyError: 'name'
+2013-10-20 00:58:06,237 ERROR [waitress][Dummy-1] Exception when serving /sendEmail
+Traceback (most recent call last):
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/waitress-0.8.7-py2.7.egg/waitress/channel.py", line 332, in service
+    task.service()
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/waitress-0.8.7-py2.7.egg/waitress/task.py", line 173, in service
+    self.execute()
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/waitress-0.8.7-py2.7.egg/waitress/task.py", line 388, in execute
+    app_iter = self.channel.server.application(env, start_response)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/router.py", line 272, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/router.py", line 247, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid_tm-0.7-py2.7.egg/pyramid_tm/__init__.py", line 82, in tm_tween
+    reraise(*exc_info)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid_tm-0.7-py2.7.egg/pyramid_tm/__init__.py", line 63, in tm_tween
+    response = handler(request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/config/views.py", line 348, in rendered_view
+    result = view(context, request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/config/views.py", line 494, in _requestonly_view
+    response = view(request)
+  File "/home/matheus/pyramid_projects/matheus_project/matheus_project/views.py", line 102, in sendEmail_view
+    name = request.GET["name"]
+  File "build/bdist.linux-x86_64/egg/webob/multidict.py", line 99, in __getitem__
+    raise KeyError(key)
+KeyError: 'name'
+2013-11-22 03:41:29,239 ERROR [waitress][Dummy-1] Exception when serving /sendEmail
+Traceback (most recent call last):
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/waitress-0.8.7-py2.7.egg/waitress/channel.py", line 332, in service
+    task.service()
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/waitress-0.8.7-py2.7.egg/waitress/task.py", line 173, in service
+    self.execute()
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/waitress-0.8.7-py2.7.egg/waitress/task.py", line 388, in execute
+    app_iter = self.channel.server.application(env, start_response)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/router.py", line 272, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/router.py", line 247, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid_tm-0.7-py2.7.egg/pyramid_tm/__init__.py", line 82, in tm_tween
+    reraise(*exc_info)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid_tm-0.7-py2.7.egg/pyramid_tm/__init__.py", line 63, in tm_tween
+    response = handler(request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/config/views.py", line 348, in rendered_view
+    result = view(context, request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/config/views.py", line 494, in _requestonly_view
+    response = view(request)
+  File "/home/matheus/pyramid_projects/matheus_project/matheus_project/views.py", line 102, in sendEmail_view
+    name = request.GET["name"]
+  File "build/bdist.linux-x86_64/egg/webob/multidict.py", line 99, in __getitem__
+    raise KeyError(key)
+KeyError: 'name'
+2013-11-22 11:17:52,133 ERROR [waitress][Dummy-2] Exception when serving /sendEmail
+Traceback (most recent call last):
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/waitress-0.8.7-py2.7.egg/waitress/channel.py", line 332, in service
+    task.service()
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/waitress-0.8.7-py2.7.egg/waitress/task.py", line 173, in service
+    self.execute()
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/waitress-0.8.7-py2.7.egg/waitress/task.py", line 388, in execute
+    app_iter = self.channel.server.application(env, start_response)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/router.py", line 272, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/router.py", line 247, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid_tm-0.7-py2.7.egg/pyramid_tm/__init__.py", line 82, in tm_tween
+    reraise(*exc_info)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid_tm-0.7-py2.7.egg/pyramid_tm/__init__.py", line 63, in tm_tween
+    response = handler(request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/config/views.py", line 348, in rendered_view
+    result = view(context, request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/config/views.py", line 494, in _requestonly_view
+    response = view(request)
+  File "/home/matheus/pyramid_projects/matheus_project/matheus_project/views.py", line 102, in sendEmail_view
+    name = request.GET["name"]
+  File "build/bdist.linux-x86_64/egg/webob/multidict.py", line 99, in __getitem__
+    raise KeyError(key)
+KeyError: 'name'
+2013-11-22 16:48:54,441 ERROR [waitress][Dummy-3] Exception when serving /sendEmail
+Traceback (most recent call last):
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/waitress-0.8.7-py2.7.egg/waitress/channel.py", line 332, in service
+    task.service()
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/waitress-0.8.7-py2.7.egg/waitress/task.py", line 173, in service
+    self.execute()
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/waitress-0.8.7-py2.7.egg/waitress/task.py", line 388, in execute
+    app_iter = self.channel.server.application(env, start_response)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/router.py", line 272, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/router.py", line 247, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid_tm-0.7-py2.7.egg/pyramid_tm/__init__.py", line 82, in tm_tween
+    reraise(*exc_info)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid_tm-0.7-py2.7.egg/pyramid_tm/__init__.py", line 63, in tm_tween
+    response = handler(request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/config/views.py", line 348, in rendered_view
+    result = view(context, request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/config/views.py", line 494, in _requestonly_view
+    response = view(request)
+  File "/home/matheus/pyramid_projects/matheus_project/matheus_project/views.py", line 102, in sendEmail_view
+    name = request.GET["name"]
+  File "build/bdist.linux-x86_64/egg/webob/multidict.py", line 99, in __getitem__
+    raise KeyError(key)
+KeyError: 'name'
+2013-11-22 22:59:53,472 ERROR [waitress][Dummy-1] Exception when serving /sendEmail
+Traceback (most recent call last):
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/waitress-0.8.7-py2.7.egg/waitress/channel.py", line 332, in service
+    task.service()
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/waitress-0.8.7-py2.7.egg/waitress/task.py", line 173, in service
+    self.execute()
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/waitress-0.8.7-py2.7.egg/waitress/task.py", line 388, in execute
+    app_iter = self.channel.server.application(env, start_response)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/router.py", line 272, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/router.py", line 247, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid_tm-0.7-py2.7.egg/pyramid_tm/__init__.py", line 82, in tm_tween
+    reraise(*exc_info)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid_tm-0.7-py2.7.egg/pyramid_tm/__init__.py", line 63, in tm_tween
+    response = handler(request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/config/views.py", line 348, in rendered_view
+    result = view(context, request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/config/views.py", line 494, in _requestonly_view
+    response = view(request)
+  File "/home/matheus/pyramid_projects/matheus_project/matheus_project/views.py", line 102, in sendEmail_view
+    name = request.GET["name"]
+  File "build/bdist.linux-x86_64/egg/webob/multidict.py", line 99, in __getitem__
+    raise KeyError(key)
+KeyError: 'name'
+2013-11-23 05:01:29,803 ERROR [waitress][Dummy-2] Exception when serving /sendEmail
+Traceback (most recent call last):
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/waitress-0.8.7-py2.7.egg/waitress/channel.py", line 332, in service
+    task.service()
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/waitress-0.8.7-py2.7.egg/waitress/task.py", line 173, in service
+    self.execute()
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/waitress-0.8.7-py2.7.egg/waitress/task.py", line 388, in execute
+    app_iter = self.channel.server.application(env, start_response)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/router.py", line 272, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/router.py", line 247, in invoke_subrequest
+    response = handle_request(request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/tweens.py", line 21, in excview_tween
+    response = handler(request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid_tm-0.7-py2.7.egg/pyramid_tm/__init__.py", line 82, in tm_tween
+    reraise(*exc_info)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid_tm-0.7-py2.7.egg/pyramid_tm/__init__.py", line 63, in tm_tween
+    response = handler(request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/router.py", line 163, in handle_request
+    response = view_callable(context, request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/config/views.py", line 348, in rendered_view
+    result = view(context, request)
+  File "/home/matheus/virtual_python/local/lib/python2.7/site-packages/pyramid-1.5a2-py2.7.egg/pyramid/config/views.py", line 494, in _requestonly_view
+    response = view(request)
+  File "/home/matheus/pyramid_projects/matheus_project/matheus_project/views.py", line 102, in sendEmail_view
+    name = request.GET["name"]
+  File "build/bdist.linux-x86_64/egg/webob/multidict.py", line 99, in __getitem__
+    raise KeyError(key)
+KeyError: 'name'
