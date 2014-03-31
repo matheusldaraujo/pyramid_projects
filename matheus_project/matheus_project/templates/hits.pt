@@ -16,10 +16,10 @@
      <th>userAgent</th>
      <th>date</th>
    </tr>
-  <tr tal:repeat="hit hits">
+  <tr class="row" tal:repeat="hit hits">
     <td>${hit.id}</td>
-    <td>${hit.ip}</td>
-    <td>${hit.userAgent}</td>
+    <td class="ip">${hit.ip}</td>
+    <td class="agente">${hit.userAgent}</td>
     <td>${hit.date}</td>
   </tr>
  </table>
